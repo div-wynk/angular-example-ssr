@@ -1,0 +1,34 @@
+<div class="playlistWrapper position-relative w-100 float-left" *ngIf="inputData && inputData.items && inputData.items.length > 0" >
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1  class="w-75 d-inline-block text-truncate">{{inputData.title | titlecase}}</h1>
+        <app-filter-list [customType]="customType" [currentLanguage]="currentLanguage"></app-filter-list>
+    </div>
+
+    <div class="grid-container d-flex justify-content-start flex-wrap" id="{{inputData.id}}">
+        <div class="grid-item" id="{{gridArr.id}}" *ngFor="let gridArr of this.inputData.items;let i=index"
+            (click)="singleHorizontalGridClicked(gridArr,i)">
+            <div class="insideGrid w-100 float-left">
+                <div class="playlistSong position-relative">
+                    <div class="defaultBg border-radius-10" >
+                        <img appImgLazyLoad
+                            class="img-fluid border-radius-10"
+                            src="{{gridArr.smallImage | customImageSize: 'SONG-GRID'}}" title="{{gridArr.title}}" alt="{{gridArr.title}}">
+                    </div>
+                    <div class="gridContent w-100 float-left pt-2">
+                        <a routerLink="/music/{{gridArr.type | lowercase}}/{{gridArr.title|lowercase | replaceWhiteSpace}}/{{gridArr.id | replaceCpIds :inputData.title}}"
+                            class="dark-text-color w-100 float-left text-truncate" title="{{gridArr.title}}">{{gridArr.title}}
+                        </a>
+                    </div>
+                    <app-hover-state [songInfo]="gridArr" [package]="inputData" [screenId]="screenId" (shareSongClickEvent)="shareSongEvent(gridArr)"
+                        (overflowSongClickEvent)="overflowSongEvent(gridArr)">
+                    </app-hover-state>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="showMoreBtn w-100 text-center mt-2" id="showMoreBtn" *ngIf="inputData.items.length != inputData.total">
+            <a (click)="showMore()">Show More</a>
+        </div>
+
+</div>    

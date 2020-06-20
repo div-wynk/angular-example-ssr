@@ -1,0 +1,110 @@
+.registration-lhs {
+    border-radius: 18px 0px 0px 18px;
+    -webkit-border-radius: 18px 0px 0px 18px;
+    -moz-border-radius: 18px 0px 0px 18px;
+    -o-border-radius: 18px 0px 0px 18px;
+    -ms-border-radius: 18px 0px 0px 18px;
+    background-image: url('/assets/images/login.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #fbc2bd;
+}
+
+.registration-lhs h2 {
+    color: #ffffff;
+    line-height: 35px;
+}
+
+.registration-lhs p {
+    font-size: 16px;
+    color: #ffffff;
+    line-height: 25px;
+}
+
+.btn_validation {
+    cursor: not-allowed;
+    background-color: rgba(237, 28, 36, 0.7);
+    border: 1px solid rgba(237, 28, 36, 0.7);
+}
+
+.btn_validation:hover {
+    background-color: rgba(237, 28, 36, 0.7);
+}
+
+.close {
+    top: 15px;
+    right: 15px;
+}
+
+.close i {
+    font-size: 30px;
+}
+
+p.subInfo,
+.status-otp {
+    font-size: 16px;
+}
+
+.subInfo a {
+    cursor: pointer;
+}
+
+.status {
+    color: #f2a222;
+}
+
+.loginCta button {
+    padding: 7px 20px;
+    min-width: 110px;
+}
+
+.detail-prefix {
+    width: 50px;
+}
+
+.phoneno {
+    width: 225px;
+}
+
+.reg-bottom p {
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.status-otp a,
+.editFormIcon {
+    cursor: pointer;
+}
+
+.editFormIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #eaeaea;
+}
+
+.appStore img {
+    cursor: pointer;
+}
+
+@media (min-width:319px) and (max-width:768px) {
+    p.subInfo {
+        color: #93979a;
+        font-size: 14px;
+    }
+}
+
+@media (min-width:319px) and (max-width:375px) {
+    .close i {
+        font-size: 28px;
+    }
+    .loginCta button {
+        min-width: 115px;
+    }
+    .detail-prefix {
+        width: 60px;
+    }
+    .phoneno {
+        width: 180px;
+    }
+}

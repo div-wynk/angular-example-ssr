@@ -1,0 +1,19 @@
+<div class="castSection w-100 float-left mt-4 mt-md-5 mb-4 mb-md-0" *ngIf="inputData && inputData.items ">
+    <h3>{{inputData.title | titlecase}}</h3>
+    <ul class="cast" (scroll)="slideLeftRight($event, inputData.id)" id="{{inputData.id}}">
+        <li *ngFor="let singer of this.inputData && this.inputData.items" class="castList d-flex align-items-center mt-3" (click)="circleGridClicked(singer)">
+            <div class="castImg rounded-circle">
+                <img appImgLazyLoad class="img-fluid rounded-circle" [isArtist]="true" src="{{singer.smallImage | customImageSize: 'SONG-SM'}}" alt="{{singer.title}}"
+                    title="{{singer.title}}">
+            </div>
+            <div class="castContent">
+                <a class="dark-text-color w-100 float-left text-truncate" routerLink="/music/{{singer.type | lowercase}}/{{singer.title|lowercase | replaceWhiteSpace}}/{{singer.id | replaceCpIds :inputData.title}}"
+                     title="{{singer.title}}">{{singer.title}}</a>
+                <div class="light-text-color w-100 float-left" title="Singer">Singer</div>
+            </div>
+        </li>
+    </ul>
+    <div class="showMoreBtn w-100 text-center mt-4" id="showMoreBtn" *ngIf="inputData.items.length != castList.length">
+        <a (click)="showMore()">Show More</a>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+@import '../../../../assets/css/var';
+.scrollableSection {
+    overflow-y: hidden;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none;
+}
+.cursor-pointer{
+    cursor: pointer;
+}
+.cursor-text{
+    pointer-events: none;
+}
+
+.railHeading {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0px;
+    font-family: Roboto,sans-serif;
+    line-height: 1.2;
+}
+
+@media (min-width: 319px) and (max-width: 575px) {
+    .railHeading {
+        font-size: 22px;
+    }
+}
+
+.scrollableSection::-webkit-scrollbar {
+    height: 0px;
+ }
+
+.insideGrid {
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.prev,
+.next {
+    top: 58%;
+}
+
+.prev i,
+.next i {
+    top: 40%;
+}
+
+.playlistWrapper:hover .prev i,
+.playlistWrapper:hover .next i {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (min-width: 319px) and (max-width: 768px) {
+    .prev,
+    .next {
+        display: none;
+    }
+}
+
+@media (min-width: 319px) and (max-width: 575px) {
+    .playlistWrapper h2 {
+        font-size: 22px;
+    }
+}

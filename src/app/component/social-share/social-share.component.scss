@@ -1,0 +1,62 @@
+@import '../../../assets/css/var';
+.modal-body {
+    padding: 3rem 1rem;
+}
+
+.socialIcons li {
+    cursor: pointer;
+    @media (max-width:576px) {
+        display: flex;
+    }
+}
+
+.socialIcons li i {
+    font-size: 35px;
+    border: solid 1px #e8e8e8;
+    @include transition-animation(all ease-in-out .2s);
+}
+
+.socialIcons li .icon-circle {
+    height: 50px;
+}
+
+.social-text {
+    font-weight: 500;
+    @media (max-width:576px) {
+        margin-top:-0.5rem;
+    }
+}
+
+.close i {
+    font-size: 30px;
+}
+
+i.whatsappClr {
+    color: #2cb842;
+}
+
+i.fbClr {
+    color: #3d5aa7;
+}
+
+i.twrClr {
+    color: #55acee;
+}
+
+.modal-header .close {
+    padding: 0px;
+    margin: 0px;
+}
+
+@media (min-width:319px) and (max-width:575px) {
+    .modal-title {
+        font-size: 18px;
+    }
+    .modal-body {
+        padding: 2rem 1rem 1rem;
+    }
+    .socialIcons li i {
+        font-size: 25px;
+        border: 0px;
+    }
+}

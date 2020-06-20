@@ -1,0 +1,18 @@
+<!-- <app-home-shimmering *ngIf="!featuredData;else featuredDataBlock"></app-home-shimmering> -->
+<div *ngIf="!featuredData;else featuredDataBlock"></div>
+<ng-template #featuredDataBlock>
+    <apps-flyer [type]="'HOME'"></apps-flyer>
+    <app-banner *ngIf="featuredRail.length > 0" [inputImages]="featuredRail"></app-banner>
+    <div class="homeRails" [ngClass]="{'sideSpacer':this.router.url === '/music'}">
+        <div *ngFor="let data of featuredData; let i = index;">
+            <app-single-horizontal-rail appLazyLoadComponent (loadMore)="loadNextRail()" [scrollThrottle]="0.3" [key]="lazyLoadKey" class="railWrapper w-100 float-left position-relative" *ngIf="data.railType === 'SINGLES'" [screenId]="'Homepage'" [inputData]="data" [showSeeAll]="true"
+                (singleHorizontalRailClickedEvent)="railClickEvent(data,i,false)" (singleHorizontalRailSeeAllClicked)="railClickEvent(data,i,true)"
+                (singleHorizontalRailShareClicked)="sharePlayList($event)" (singleHorizontalRailOverflowClicked)="updatePlaylist($event.action,$event.info)"
+                [viewType]="'GRIDVIEW'" (singleHorizontalRailScollEvent)="railScroll($event,i)"></app-single-horizontal-rail>
+
+            <app-single-horizontal-grid appLazyLoadComponent (loadMore)="loadNextRail()" [scrollThrottle]="0.3" [key]="lazyLoadKey" class="playlistWrapper position-relative w-100 float-left" *ngIf="data && data.itemTypes && data.itemTypes.length > 0 && gridTypesArray.indexOf(data.itemTypes[0])>-1"
+                [screenId]="'Homepage'" [queryParams]="data.railType.toLowerCase()" [inputData]="data" [showSeeAll]="true" [viewType]="'GRIDVIEW'" (singleHorizontalGridClickedEvent)="railClickEvent(data,i,false)"
+                (singleHorizontalGridSeeAllClicked)="railClickEvent(data,i,true)" (singleHorizontalGridScollEvent)="railScroll($event,i)"></app-single-horizontal-grid>
+        </div>
+    </div>
+</ng-template>

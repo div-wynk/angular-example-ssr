@@ -1,0 +1,108 @@
+@import '../../../../assets/css/var';
+.railWrapper {
+    overflow: hidden;
+}
+
+.cursor-pointer{
+    cursor: pointer;
+}
+.cursor-text{
+    cursor:text;
+    pointer-events: none;
+}
+.railHeading {
+    display: inline-block;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0px;
+    font-family: Roboto,sans-serif;
+    line-height: 1.2;
+}
+@media (min-width: 319px) and (max-width: 575px) {
+    .railHeading {
+        font-size: 22px;
+    }
+}
+.myWorkContent {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* IE 11 */
+    scrollbar-width: none;
+}
+
+.myWorkContent::-webkit-scrollbar {
+    height: 0px;
+ }
+
+.rail li {
+    width: 140px;
+    display: inline-block;
+    margin-right: 20px;
+    cursor: pointer;
+    vertical-align: top;
+}
+
+.pointer-text{
+    cursor: text;
+}
+
+.rail li:nth-last-child(1) {
+    margin-right: 110px;
+}
+
+.railWrapper {
+    @include transition-animation(all ease-in-out .2s);
+}
+
+.prev,
+.next {
+    top: 58%;
+}
+
+.prev i,
+.next i {
+    top: 40%;
+}
+
+.railWrapper:hover .prev i,
+.railWrapper:hover .next i {
+    opacity: 1;
+    visibility: visible;
+}
+
+.helltune-rail{
+    .prev,
+.next {
+    top: 45%;
+}
+}
+
+@media (min-width: 319px) and (max-width: 768px) {
+    .rail li {
+        margin-right: 15px;
+        margin-left: 0px;
+    }
+    .railWrapper {
+        overflow: unset;
+    }
+    .rail li {
+        width: 120px;
+    }
+    .prev,
+    .next {
+        display: none;
+    }
+    .rail li:nth-last-child(1) {
+        margin-right: 15px;
+    }
+}
+
+@media (min-width: 319px) and (max-width: 575px) {
+    .railWrapper h2 {
+        font-size: 22px;
+    }
+}

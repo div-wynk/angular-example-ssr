@@ -1,0 +1,18 @@
+@import "../../../assets/css/var";
+.drop-overflow {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+}
+
+.drop-overflow li a {
+    width: 100%;
+    display: inline-block;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+@media(min-width:768px) {
+    .shareInOverflow {
+        display: none;
+    }
+}

@@ -1,0 +1,9 @@
+<div class="modal-body warningModal text-center position-relative">
+    <i class="icon-ic_close_web_mobile position-absolute" (click)="modal.close()"></i>
+    <h2 class="pt-4">{{heading}}</h2>
+    <p class="dark-text-color mt-3">{{message}}</p>
+    <div class="text-center mt-5 pb-4">
+        <button *ngIf="leftBtn" type="button" class="white mr-3" (click)="modal.close()">{{leftBtn}}</button>
+        <button *ngIf="rightBtn" type="button" class="red" (click)="modal.close('YES')">{{rightBtn}}</button>
+    </div>
+</div>

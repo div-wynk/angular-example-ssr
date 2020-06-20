@@ -1,0 +1,48 @@
+:root{
+    --white:#ffffff;
+    --brand-color:#ed1c24;
+    --default-bg-color: #e8e8e8;
+    --dark-color:#282f36;
+    --light-color:#767676;
+    --error-color: #f2a222;
+    --bold-text-color:#767676;
+    --gray-bg-button:#bcbcbc;
+    --shimer-bg1:#f2f2f2;
+    --shimer-bg2:#e6e6e6;
+}
+
+$font-size-12:12px;
+$font-size-14:14px;
+$font-size-20:20px;
+$font-weight-500:500;
+
+$menu-hover-color:#666;
+$default-bg-color: #e8e8e8;
+$light-color:#767676;
+$error-color: #f2a222;
+$bold-text-color:#767676;
+$light-bg-color:#f2f2f2;
+$dropdown-menu-bg-color:#fafafa;
+$toast-default-bg-color:#333333;
+$gray-line-bg-color:#eeeeee;
+$black:#000000;
+$social-icon-hover-bg-color:#f6f6f6;
+$transition-animation-banner: all ease-in-out 20s;
+$transform:translate(-50%, -50%);
+$cursor:pointer;
+
+@mixin border-radius($radius){
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+
+@mixin transition-animation($transition-animation){
+    transition: $transition-animation;
+    -webkit-transition: $transition-animation;
+    -moz-transition: $transition-animation;
+    -ms-transition: $transition-animation;
+    -o-transition: $transition-animation;
+}

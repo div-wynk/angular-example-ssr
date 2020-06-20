@@ -1,0 +1,30 @@
+<main class="banner-item main position-relative mb-0 mb-sm-3 mb-md-3" *ngIf="!isLyfPhone">
+    <div class="bannerWrapper">
+        <div class="items" id='items' (swipe)="imageSwipe($event)">
+            <div class="item" *ngFor="let item of circularBannerImage" [ngStyle]="{'width.px': this.imageWidth, 'height.px':0.341*this.imageWidth}">
+                <a *ngIf="item.type != 'SONG'" [attr.aria-label]="item.title" routerLink="/music/{{item.type | lowercase}}/{{item.title|lowercase | replaceWhiteSpace}}/{{item.id | replaceCpIds :item.title}}">
+                    <img class="w-100 img-fluid" appImgLazyLoad [isBanner]=true [src]="item.redesignFeaturedImage|| item.largeImage | customImageSize: 'CAROUSEL'" alt="" title="" [ngStyle]="{'height.px':0.341*this.imageWidth}" />
+                </a>
+                <a *ngIf="item.type == 'SONG'" [attr.aria-label]="item.title" routerLink="/music/{{item.type | lowercase}}/{{item.title |lowercase |replaceWhiteSpace}}/{{item.id | replaceCpIds :item.title}}">
+                    <img class="w-100 img-fluid" appImgLazyLoad [isBanner]=true [src]="item.largeImage | customImageSize: 'CAROUSEL'" alt="" title="" [ngStyle]="{'height.px':0.341*this.imageWidth}" />
+                </a>
+            </div>
+            <div *ngIf="_localStorageWrapperService.isPlatformServer()">
+                <div class="item" *ngFor="let item of circularBannerImage" >
+                        <a *ngIf="item.type != 'SONG'" routerLink="/music/{{item.type | lowercase}}/{{item.title|lowercase | replaceWhiteSpace}}/{{item.id | replaceCpIds :item.title}}">
+                            {{item.title}}
+                        </a>
+                        <a *ngIf="item.type == 'SONG'"  routerLink="/music/{{item.type | lowercase}}/{{item.title |lowercase |replaceWhiteSpace}}/{{item.id | replaceCpIds :item.title}}" >
+                            {{item.title}}
+                        </a>
+                </div>
+            </div>  
+        </div>
+    </div>
+    <div class="prev position-absolute" (click)="prev()">
+        <i class="icon-ic_global_left_chevron_dark rounded-circle position-absolute"></i>
+    </div>
+    <div class="next position-absolute" (click)="next()">
+        <i class="icon-ic_chevron_right_dark rounded-circle position-absolute"></i>
+    </div>
+</main>

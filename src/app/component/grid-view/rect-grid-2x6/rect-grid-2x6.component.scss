@@ -1,0 +1,28 @@
+.rect-grid {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.rect-grid li {
+    width: 20%;
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (max-width: 990px) {
+    .scrollableSection {
+        overflow-y: hidden;
+        overflow-x: auto;
+        white-space: nowrap;
+        scroll-behavior: smooth;
+        -ms-overflow-style: none;
+        /* IE 11 */
+        scrollbar-width: none;
+        padding-left: 15px;
+    }
+    .rect-grid li {
+        width: 140px;
+        padding-left: 0px;
+    }
+}

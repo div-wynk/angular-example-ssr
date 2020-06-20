@@ -1,0 +1,63 @@
+<!-- <app-add-to-playlist-shimmering *ngIf="!allPlaylists"></app-add-to-playlist-shimmering> -->
+<div class="w-100 d-inline-block p-3 p-md-4 p-sm-4" *ngIf="allPlaylists">
+
+    <div class="header w-100 d-inline-block border-bottom pb-2 position-relative">
+        <h4 *ngIf="allPlaylists && allPlaylists.items && userHasPlaylists && !createNewPlaylist" class="modal-title w-100 d-inline-block">Add to Playlist</h4>
+        <h4 *ngIf="allPlaylists && allPlaylists.items && userHasPlaylists && createNewPlaylist" class="modal-title w-100 d-inline-block">
+            Create New Playlist
+            <div class="w-100 d-inline-block light-text-color subText">And don't forget to share it with your friends</div>
+        </h4>
+        <h4 *ngIf="allPlaylists && allPlaylists.items && !userHasPlaylists" class="modal-title w-100 d-inline-block">
+            First Playlist, First Love!
+            <div class="w-100 d-inline-block light-text-color subText">Do share & tell your friends about it</div>
+        </h4>
+        <button type="button" class="close position-absolute" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+            <i class="icon-ic_close_web_mobile"></i>
+        </button>
+    </div>
+    <div class="body">
+        <div class="user-playlists pt-3" *ngIf="allPlaylists && allPlaylists.items && userHasPlaylists && !createNewPlaylist">
+            <div class="d-flex justify-content-between align-items-center mb-3" *ngFor="let playlist of allPlaylists.items;let i= index;">
+                <div class="playlistBody d-flex align-items-center">
+                    <div class="smallImage d-inline-block">
+                        <img appImgLazyLoad class="border-radius-10" src="{{playlist.smallImage | customImageSize: 'SONG-SM'}}" title="{{playlist.title}}"
+                            alt="{{playlist.title}}">
+                    </div>
+                    <div class="playlistContent ml-3">
+                        <div class="dark-text-color text-truncate">{{playlist.title}}</div>
+                        <div class="light-text-color">
+                            {{playlist.total}}
+                            <span *ngIf="playlist.total > 1">songs</span>
+                            <span *ngIf="playlist.total == 1">song</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="list-action-icon ml-3">
+                    <i *ngIf="playlist.checked" class="icon-ic_global_check p-1 d-flex align-items-center rounded-circle checkIcon" (click)="addOrRemoveFromPlaylist(playlist)"></i>
+                    <i *ngIf="!playlist.checked" class="icon-ic_global_follow_dark p-1 d-flex align-items-center rounded-circle checkAdd" (click)="addOrRemoveFromPlaylist(playlist)"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="createPlaylist" name="listForm" *ngIf="allPlaylists && allPlaylists.items && (!userHasPlaylists || createNewPlaylist)">
+            <input autofocus type="text" class="w-100 d-inline-block border border-radius-5 p-2 phoneno mt-4 mb-4" name="playlistTitle"
+                 id="playlistTitle" placeholder="Give your playlist a name" autocomplete="off" (keyup)="isFormValid($event)"
+                (keydown.enter)="listFormValid ? createPlaylist():null"  #playlistName>
+            <p *ngIf="!listFormValid && listFormTouched" class="playlist-error">{{playlistError}}</p>
+            <div class="w-100 d-inline-block border-top pt-3 text-center text-md-right footer">
+                <button type="button" class="button white mr-3" (click)="activeModal.dismiss('Cross click')">Cancel</button>
+                <button type="button" [disabled]="!listFormValid" [ngClass]="{'button border disabled':!listFormValid, 'button red': listFormValid }"
+                    (click)="createPlaylist()">
+                    Save
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer w-100 d-inline-block border-top pt-4 text-center" *ngIf="allPlaylists && allPlaylists.items && userHasPlaylists && !createNewPlaylist">
+        <button type="button" class="button white" (click)="showCreatePlaylist()">
+            <i class="icon-ic_global_follow_dark"></i> Create New
+        </button>
+    </div>
+</div>

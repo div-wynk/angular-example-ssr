@@ -1,0 +1,14 @@
+@import '../../../assets/css/var';
+.toastImg img {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+}
+
+.toastBodyText .message {
+    line-height: 16px;
+}
+
+.toastInside{
+    overflow: hidden;
+}

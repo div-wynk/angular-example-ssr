@@ -1,0 +1,653 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "./assets/css/var";
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
+
+.modal-backdrop.show {
+  opacity: 0.9;
+}
+
+.modal-backdrop {
+  background-color: #08090a;
+}
+
+img {
+  border: none;
+  text-indent: -10000px;
+}
+
+input {
+  font-size: 16px;
+}
+
+img:-moz-loading {
+  display: none;
+}
+
+img::-moz-broken {
+  display: none;
+}
+
+:focus,
+:active button,
+input,
+select,
+img,
+button {
+  outline: 0px !important;
+  -webkit-appearance: none;
+}
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+h3 {
+  font-size: 21px;
+}
+
+.cursor {
+  cursor: $cursor;
+}
+
+a.seeAllBtn {
+  padding: 1px 5px;
+  color: #e8121a !important; //The color has been changed to improve accessibility score
+  font-size: 13px;
+  text-align: center;
+  min-width: 60px;
+}
+
+a.seeAllBtn:hover {
+  background-color: var(--brand-color);
+  color: var(--white) !important;
+}
+
+.close i {
+  opacity: 0.4;
+  @include transition-animation(all ease-in-out 0.2s);
+}
+
+.close:hover i {
+  opacity: 1;
+}
+
+h1,
+h2,
+h3,
+a:hover,
+.name,
+button.white,
+button.white:hover,
+.circleIcons a {
+  color: var(--dark-color);
+  @include transition-animation(all ease-in-out 0.2s);
+}
+
+.gr__tooltip,
+::-webkit-search-cancel-button {
+  display: none;
+}
+
+.dark-text-color {
+  color: var(--dark-color);
+  font-size: $font-size-14 + 1px;
+}
+
+.light-text-color {
+  color: $light-color;
+  font-size: $font-size-14 - 2px;
+}
+
+.bold-text-color {
+  color: $bold-text-color;
+}
+
+.font-weight-500 {
+  font-weight: $font-weight-500;
+}
+.border-radius-5 {
+  @include border-radius(5px);
+}
+
+.border-radius-10 {
+  @include border-radius(10px);
+}
+
+.border-radius-20 {
+  @include border-radius(20px);
+}
+.modal-content {
+  border-radius: 20px !important;
+}
+
+.paddingLeft0 {
+  padding-left: 0px;
+}
+
+.paddingRight0 {
+  padding-right: 0px;
+}
+
+.navbar button {
+  margin-right: 0px;
+  border: 0px;
+  padding: 0px;
+}
+
+.rounded-20,
+a.seeAllBtn,
+.showMoreBtn a,
+button {
+  @include border-radius(20px);
+}
+
+.defaultBg {
+  margin: 0;
+  display: block;
+  border: 0;
+  position: relative;
+  background-color: $default-bg-color;
+  padding-top: 100%;
+}
+
+.defaultBg img {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.popover {
+  width: 165px;
+  border: 0px;
+}
+
+.popover-body {
+  padding: 0px;
+}
+
+.sideSpacer {
+  width: 85%;
+}
+
+.sideSpacer-helloTune {
+  padding-left: 8.5%;
+  padding-right: 8.5%;
+}
+
+.rail li .railImgWrapper:hover .hoverState,
+.playlistSong:hover .hoverState,
+.similarSong:hover .hoverState,
+.albumContent .ls:hover .hoverState,
+.showMoreBtn,
+.showMoreBtn a,
+button,
+.circleIcons a {
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.albumContent .hoverState {
+  width: 60px;
+  height: 60px;
+}
+
+.albumContent i.shareIcon,
+.albumContent i.overflowIcon {
+  display: none;
+}
+
+.showMoreBtn a {
+  cursor: pointer;
+  border: solid 1px $default-bg-color;
+  text-align: center;
+  color: #999999;
+  padding: 7px 20px;
+}
+
+.showMoreBtn a:hover,
+button.white:hover,
+.circleIcons a:hover {
+  background-color: $light-bg-color;
+}
+
+button {
+  padding: 0.36rem 0.85rem 0.385rem 0.55rem;
+  line-height: 1.9;
+  font-weight: $font-weight-500;
+}
+
+button.red {
+  background-color: var(--brand-color);
+  border: solid 1px var(--brand-color);
+  color: var(--white);
+}
+
+button.red:hover {
+  background-color: #cc0016;
+}
+
+button.dark-red {
+  background-color: #e8121a;
+  border: solid 1px #e8121a;
+  color: var(--white);
+}
+
+button.white {
+  background-color: var(--white);
+  border: solid 1px $default-bg-color;
+}
+.circleIcons a:first-child {
+  margin-left: 0px;
+}
+
+.circleIcons a {
+  width: 40px;
+  height: 40px;
+  border: solid 1px $default-bg-color;
+  text-align: center;
+  margin-left: 20px;
+  cursor: pointer;
+  float: left;
+}
+
+.watch-movie-btn {
+  color: var(--dark-color);
+  font-weight: $font-weight-500;
+  padding: 8px 10px 8px 5px;
+  font-size: $font-size-12;
+  i {
+    color: var(--brand-color);
+  }
+}
+
+.left-add-15,
+.left-add-negative-15,
+.circleIcons a,
+button {
+  @include transition-animation(all ease-in-out 0.2s);
+}
+
+.homeRails.sideSpacer {
+  margin: 0px auto;
+}
+
+.myWorkContent {
+  margin-right: -15px;
+}
+
+.left-add-negative-15 {
+  margin-left: -15px;
+}
+
+.popover.profile-popover {
+  z-index: 1025;
+  background: var(--white);
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+  border: none;
+  @include border-radius(10px);
+}
+
+.popover.profile-popover {
+  width: 180px;
+  padding: 15px;
+}
+
+.popover .arrow {
+  display: none;
+}
+
+.popover-body {
+  border: none;
+  outline: none;
+}
+
+.dragnDropList .albumList li {
+  cursor: move !important;
+}
+
+.warningModal button {
+  min-width: 110px;
+}
+
+.warningModal i {
+  right: 15px;
+  top: 25px;
+  cursor: pointer;
+}
+
+.toast-info,
+.toast-error,
+.toast-success,
+.toast-warning,
+.toast-general,
+.toast-general .dark-text-color {
+  color: var(--white);
+}
+
+.toast-info {
+  // background-color: #0288d1;
+  background-color:$toast-default-bg-color;
+}
+
+.toast-error {
+  // background-color: #e57b00;
+  background-color:$toast-default-bg-color;
+}
+
+.toast-success {
+  // background-color: #40d189;
+  background-color:$toast-default-bg-color;
+}
+
+.toast-warning {
+  // background-color: #e57b00;
+  background-color:$toast-default-bg-color;
+}
+
+.toast-general {
+  background-color:$toast-default-bg-color;
+}
+.toast-container .toast,
+.toast-container .playlist-toast {
+  @include border-radius(10px);
+  box-shadow: none;
+  text-align: center;
+  padding: 15px !important;
+}
+
+.toast-container .toast .toastBodyText {
+  width: 100%;
+}
+
+.toast-container .playlist-toast {
+  text-align: left;
+  margin-bottom: 6px;
+  background-color: var(--white);
+}
+
+.toastBodyText .message span {
+  color: var(--dark-color);
+  font-weight: $font-weight-500;
+}
+
+.showPlayeratBottom .toast-container {
+  bottom: 100px;
+}
+
+.toast-container {
+  bottom: 25px;
+}
+
+.follow-actions {
+  bottom: 30px;
+  @media (max-width: 360px) {
+    bottom: 13px;
+  }
+  right: 4px;
+  padding: 4px;
+  background-color: var(--brand-color);
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  z-index: 9;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  i {
+    color: var(--white);
+    font-size: $font-size-14;
+  }
+}
+
+.mobileImg {
+  padding-top: 90%;
+  width: 90%;
+}
+
+// All Rails and Banner Left-Right Icons
+.prev,
+.next {
+  top: 50%;
+  bottom: 0px;
+  color: $black;
+  cursor: pointer;
+  text-align: center;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  z-index: 99;
+  width: 9%;
+  height: 92%;
+  display: inline-block;
+}
+
+.prev {
+  left: -39px;
+  background-image: linear-gradient(to left, rgba(238, 238, 238, 0), var(--white) 52px);
+}
+
+.next {
+  right: -33px;
+  background-image: linear-gradient(to right, rgba(238, 238, 238, 0), var(--white) 75px);
+}
+
+.prev i,
+.next i {
+  top: 50%;
+  bottom: 0px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: var(--white);
+  cursor: pointer;
+  text-align: center;
+  font-size: 25px;
+  -webkit-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  opacity: 0;
+  visibility: hidden;
+  @include transition-animation(all ease-in-out 0.2s);
+}
+
+.prev i {
+  left: 40px;
+  padding: 21px 20px 20px 7px;
+}
+
+.next i {
+  right: 35px;
+  padding: 21px 20px 20px 9px;
+}
+
+// cards Style
+
+.accordion .card {
+  border: 0px;
+  border-radius: 0px;
+}
+
+.accordion > .card .card-header {
+  margin-bottom: 0px;
+}
+
+.card-header,
+.card-header button {
+  padding: 0px;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0px;
+}
+
+.card-header button {
+  font-size: 1.1em;
+  color: var(--dark-color);
+  font-weight: 500;
+  margin-bottom: 0.9em;
+  text-align: left;
+  width: 100%;
+}
+
+.card-header button:hover,
+.card-header button:focus {
+  color: var(--dark-color);
+  text-decoration: none;
+}
+
+.card-body {
+  padding: 0px;
+  color: $light-color;
+  line-height: 25px;
+  margin-bottom: 1.8em;
+}
+
+.card-header .btn-link,
+.card-header .btn-link.collapsed {
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.card-header .btn-link {
+  background-image: url("../src/assets/images/chevron_right_up.svg");
+}
+
+.card-header .btn-link.collapsed {
+  background-image: url("../src/assets/images/chevron_right_down.svg");
+}
+
+.grayLine {
+  background-color:$gray-line-bg-color;
+  height: 18px;
+  width: 100%;
+  display: block;
+  @include border-radius(10px);
+  margin-bottom: 15px;
+}
+
+.lh {
+  width: 50%;
+  display: inline-block;
+}
+
+.watch-movie-btn {
+  display: inline-block;
+}
+
+.list {
+  list-style: disc;
+  padding-left: 2rem;
+}
+
+.note h4 {
+  font-size: 15px;
+  font-weight: normal;
+}
+
+.helltune-rail {
+  .mb-3 {
+    margin-bottom: 0px !important;
+  }
+}
+
+@media (max-width: 1290px) {
+  .watch-movies {
+    text-align: center;
+    .watch-wrapper {
+      width: 90%;
+      display: inline-block;
+    }
+    .lh {
+      width: 100%;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .watch-movies {
+    text-align: left;
+    .lh {
+      width: 50%;
+      margin-bottom: 0rem;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .mt-5.helltune-rail {
+    margin-top: 1.2rem !important;
+  }
+}
+
+/*disable hover button*/
+button.disabled{
+  &:hover,&:focus{
+      cursor: not-allowed;
+  }
+}
+
+/* shimmering   effect */
+.shimmer {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    color-stop(25%, var(--shimer-bg1)),
+    color-stop(37%, var(--shimer-bg2)),
+    color-stop(63%, var(--shimer-bg1))
+  );
+  background: linear-gradient(90deg, var(--shimer-bg1) 25%, var(--shimer-bg2)37%, var(--shimer-bg1)63%);
+  background-size: 400% 100%;
+  -webkit-animation: shimmer-loading 1.8s ease-in-out infinite;
+  animation: shimmer-loading 1.8s ease-in-out infinite;
+}
+@keyframes shimmer-loading {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+
+/* previous component css theme color*/
+
+/* dark theme  */
+  @import './assets/css/scss/default-theme';
+

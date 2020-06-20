@@ -1,0 +1,111 @@
+<div class="container-fluid">
+    <div class="registration-wrap row" *ngIf="!modifyMobileView">
+        <div class="registration-lhs col-5 p-5 text-right">
+            <!-- <img src="assets/images/registrationIcon.png" class="mt-4" alt="Wynk" title="Wynk">
+            <h2 class="pt-3 pb-1">Wynk Music</h2>
+            <p>From latest Bollywood hits to trending International artists - with over 4 million free songs we’ve got it all
+                covered.
+                <br />Keep Wynk-ing!</p> -->
+        </div>
+
+        <div class="registration-rhs col-7 p-5 position-relative">
+            <button type="button" class="close position-absolute" aria-label="Close" (click)="closeLoginModal()">
+                <i class="icon-ic_close_web_mobile"></i>
+            </button>
+            <h2 class="w-100 d-inline-block mb-2">{{languageConstants.SIGNIN}}</h2>
+
+            <div class="middle-cont pb-5">
+                <form *ngIf="showLogin" name="signinForm" (keyup.enter)="onSignin(true)">
+                    <p class="w-100 d-inline-block subInfo">{{languageConstants.SIGNIN_POPUP_TEXT}}</p>
+                    <div class="enter-detail mt-4">
+                        <input type="text" class="detail-prefix rounded p-2 border mr-3" readonly="" value="+ 91" readonly disabled>
+                        <input class="rounded p-2 phoneno border" type="tel" maxlength="10" name="phone" id="phoneno" [ngClass]="{'input_validation':!signinFormValid && signinFormTouched}"
+                            (keyup)="isFormValid('signinForm')" (input)="isFormValid('signinForm')" (keypress)="keyPress($event)"
+                            placeholder="Enter Mobile Number" #phoneNo autofocus>
+                    </div>
+                    <div class="status mt-2" *ngIf="!signinFormValid && signinFormTouched">Enter a valid mobile number</div>
+                    <div class="loginCta mt-4">
+                        <button type="button" [disabled]="!signinFormValid" class="red button" [ngClass]="{'btn_validation':!signinFormValid }" (click)="onSignin(true)">
+                            Send OTP
+                        </button>
+                    </div>
+                </form>
+                <form *ngIf="!showLogin" name="otpForm" (keyup.enter)="onSubmitOTP()">
+                    <p class="w-100 d-inline-block subInfo">OTP sent to {{phoneno}}
+                        <a class="text-danger" (click)="editForm()">Edit</a>
+                    </p>
+                    <div class="enter-detail mt-4 mb-1">
+                        <input class="rounded p-2 phoneno border" type="tel" maxlength="4" name="otp" id="validOtp" (keyup)="isFormValid('otpForm')"
+                            (keypress)="keyPress($event)" [ngClass]="{'input_validation':!otpFormValid && otpFormTouched}" autofocus
+                            placeholder="Enter OTP " autocomplete="off" #otp>
+                    </div>
+                    <div class="status" *ngIf="!otpFormValid && otpFormTouched">
+                        Incorrect OTP entered. Please enter the correct OTP
+                    </div>
+                    <div class="loginCta mt-4">
+                        <button type="button" class="white button mr-3" (click)="resendOtp()">Resend OTP</button>
+                        <button type="button" [disabled]="!otpFormValid" class="red button" [ngClass]="{'btn_validation':!otpFormValid}" (click)="onSubmitOTP()">Continue</button>
+
+                    </div>
+                </form>
+            </div>
+
+
+            <div class="reg-bottom mt-5">
+                <p>To create your account, install Wynk app</p>
+                <div class="rhs download-app">
+                    <div class="appStore">
+                        <img appImgLazyLoad alt="" title="IOS App" width="150" height="45" src="https://img.wynk.in/unsafe/150x45/filters:no_upscale():format(png):quality(100)/https://s3.ap-south-1.amazonaws.com/assets.wynk.in/images/wap-assets/footer-v2-but-app.png"
+                            (click)="getApp(false)" />
+                        <img appImgLazyLoad alt="" class="ml-2" title="Google App" width="150" height="45" src="https://img.wynk.in/unsafe/150x45/filters:no_upscale():format(png):quality(100)/https://s3.ap-south-1.amazonaws.com/assets.wynk.in/images/wap-assets/footer-v2-but-play.png"
+                            (click)="getApp(true)" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobileView pt-4 pb-4 pl-1 pr-1" *ngIf="modifyMobileView">
+        <button type="button" class="close position-absolute" aria-label="Close" (click)="closeLoginModal()">
+            <i class="icon-ic_close_web_mobile"></i>
+        </button>
+        <h2 class="w-100 d-inline-block mb-2">{{languageConstants.SIGNIN}}</h2>
+        <form *ngIf="showLogin" name="signinForm" (keyup.enter)="onSignin(true)">
+            <p class="w-100 d-inline-block subInfo">{{languageConstants.SIGNIN_POPUP_TEXT}}</p>
+            <div class="enter-detail mt-3 text-center">
+                <input type="text" class="detail-prefix rounded p-2 border mr-2" readonly="" value="+ 91">
+                <input class="rounded p-2 phoneno border" type="tel" maxlength="10" name="phone" id="phoneno" [ngClass]="{'input_validation':!signinFormValid && signinFormTouched}"
+                    (keyup)="isFormValid('signinForm')" (input)="isFormValid('signinForm')" (keypress)="keyPress($event)" placeholder="Enter Mobile Number"
+                    #phoneNo autofocus>
+            </div>
+            <div class="status mt-2 text-center" *ngIf="!signinFormValid && signinFormTouched">Enter a valid mobile number</div>
+            <div class="loginCta mt-4 text-center">
+                <button type="button" class="button white mr-3" aria-label="Close" (click)="closeLoginModal()">Cancel</button>
+                <button type="button" [disabled]="!signinFormValid" class="red button" [ngClass]="{'btn_validation':!signinFormValid }" (click)="onSignin(true)">
+                    Send OTP
+                </button>
+            </div>
+        </form>
+        <form *ngIf="!showLogin" name="otpForm" (keyup.enter)="onSubmitOTP()">
+            <div class="enter-detail">
+                <div class="status-otp mb-2">OTP sent to
+                    <span>{{phoneno}}</span>
+                    <a class="text-danger ml-2" (click)="editForm()">Edit</a>
+                </div>
+                <div class="enter-detail mb-1 mt-4 text-center">
+                    <input class="rounded p-2 phoneno border" type="tel" maxlength="4" name="otp" id="validOtp" (keyup)="isFormValid('otpForm')"
+                        (keypress)="keyPress($event)" [ngClass]="{'input_validation':!otpFormValid && otpFormTouched}" autofocus
+                        placeholder="Enter OTP " autocomplete="off" #otp>
+                </div>
+            </div>
+            <div class="status mb-2 text-center" *ngIf="!otpFormValid && otpFormTouched">
+                Incorrect OTP entered. Please enter the correct OTP
+            </div>
+            <div class="loginCta text-center mt-4">
+                <button type="button" class="white button mr-3" (click)="resendOtp()">Resend OTP</button>
+                <button type="button" [disabled]="!otpFormValid" class="red button" [ngClass]="{'btn_validation':!otpFormValid}" (click)="onSubmitOTP()">Continue</button>
+            </div>
+        </form>
+    </div>
+
+</div>

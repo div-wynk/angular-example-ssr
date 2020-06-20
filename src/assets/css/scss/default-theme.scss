@@ -1,0 +1,286 @@
+@import "./assets/css/var";
+.rectangleShadow,
+.search,
+.dropdownMenu,
+.breadcrumb,
+.volume::after,
+.sug-searchlist-wrap,
+.splay {
+  background-color: var(--white);
+}
+.sug-searchlist-wrap ul li a{
+  &:hover,&:focus{
+    background:$light-bg-color;
+  }
+}
+ul.breadcrumb {
+  li,a {
+    color: $light-color;
+  }
+
+}
+.navbar-nav li a,
+.signin,
+.railHeading,
+.page-description-right p {
+  color: var(--dark-color);
+}
+.navbar-nav li a,
+.signin{
+  &:hover,&:focus{
+    color:$menu-hover-color;
+  }
+}
+.LyricContent p,
+.lyrics p {
+  color: rgba(40, 47, 54, 0.7);
+}
+.player {
+  background-color: var(--white);
+  color: var(--white);
+  i {
+    color: #9da0a3;
+  }
+}
+
+.loader {
+  border-color: var(--white);
+  background: var(--white);
+}
+.dropdownMenu li{
+  &:hover,&:focus{
+    background:$light-bg-color;
+  }
+
+  button {
+    background-color: $dropdown-menu-bg-color;
+    color: var(--dark-color);
+    &:hover {
+      background-color: $light-bg-color;
+    }
+    span {
+      color: $light-color;
+    }
+  }
+} 
+
+.sug-searchlist ul li a {
+  color: $toast-default-bg-color;
+}
+.sug-searchlist ul li {
+  border-top: 1px solid $light-bg-color;
+}
+
+.queueInnerSection {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+p.subInfo,
+.status-otp {
+  color: #282f36;
+}
+/* login page */
+.detail-prefix {
+  background-color: #dfe2e7;
+}
+/* que component */
+button.transparentButton,
+.circleIcons a {
+  background-color: rgba(255, 255, 255, 0.3);
+  border: solid 1px rgba(211, 211, 211, 0.5);
+}
+.socialIcons li i:hover {
+  border: solid 1px #cfcfcf;
+  background-color: $social-icon-hover-bg-color;
+}
+button.transparentButton:hover{
+  background-color: rgba(255, 255, 255, 0.8);
+  border: solid 1px rgba(211, 211, 211, 1);
+}
+
+/* footer */
+.footerLastSec p,
+.fNames a {
+  color: $light-color;
+}
+a.fLinks,
+.fHeading,
+.fNames a:hover,
+ul.breadcrumb li a:hover,
+ul.breadcrumb li span,
+.down-pop-info p {
+  color: var(--dark-color);
+}
+.albumList li:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+}
+.non-login-profile.drop_profile li:first-child,
+.drop_profile li {
+  color: #202429;
+  &.text-light a{
+    color: var(--dark-color);
+  }
+}
+.drop_profile li:first-child {
+  color: #93979a;
+}
+.hamburgerView {
+  background-color: #454545;
+}
+.sshuffle:hover i,
+.srepeat:hover i,
+.showQueue:hover i,
+.sprevious:hover i,
+.snext:hover i {
+  color: var(--dark-color);
+}
+.img-cont {
+  background-color: $light-bg-color;
+}
+/*banner*/
+.item {
+  background-color: $default-bg-color;
+  img {
+    background-color: $default-bg-color;
+  }
+}
+
+/* language select component */
+
+.langText {
+  &.selected {
+    .langTextInside {
+      &:hover {
+        background-color: var(--dark-color);
+        color: var(--white);
+      }
+      background-color: var(--dark-color);
+      color: var(--white);
+    }
+  }
+  .langTextInside {
+    background-color: $dropdown-menu-bg-color;
+    color: var(--dark-color);
+    &:hover {
+      background-color: $default-bg-color;
+    }
+  }
+}
+
+.language-toggle-btn {
+  .lang-dropdown-menu {
+    background-color: var(--white);
+    li {
+      a {
+        background-color: $dropdown-menu-bg-color;
+        color: #9da0a3;
+        span {
+          color:$black;
+        }
+        &:hover {
+          background-color: #ececec;
+        }
+      }
+    }
+    .selected {
+      a {
+        background-color:var(--dark-color);
+        span {
+          color: var(--white);
+        }
+        i {
+          color: var(--white);
+        }
+        &:hover {
+          background-color:var(--dark-color);
+        }
+      }
+    }
+  }
+}
+.appStore img {
+  background-color:$light-bg-color;
+}
+/*shimmering component css*/
+.sv-grid-img,
+.grayButton,
+.slide,
+.defaultBg,
+.castImg,
+.sv-grid-img {
+  background-color: $default-bg-color;
+}
+.grayButton:first-child {
+  background-color: var(--gray-bg-button);
+}
+.lyricsBtn {
+  color: $light-color;
+  &:hover{
+    border-color:var(--dark-color);
+    color: var(--dark-color);
+  }
+}
+.checkAdd:hover,
+.smallImage img,
+.toastImg img {
+  background-color: $light-bg-color;
+}
+.checkIcon {
+  background-color: #282f36;
+  color: #fff;
+}
+.hamburgerViewNav li a{
+  color: #fff;
+  &:hover,&:focus{
+    color: #fff;
+  }
+}
+.drop-overflow {
+  li{
+  &:hover{background-color:$light-bg-color;}
+}
+.socialIcons li{
+  &:hover{
+    background-color: transparent;
+  }
+}
+}
+.dropdownMenu.soundQuality{
+  li{
+    &:first-child{color: var(--dark-color);}
+  }
+  .selected{
+    background-color: var(--dark-color);
+    color: var(--white);
+  }
+}
+.editPlaylistName{
+  border:none;
+  border-bottom: 1px solid #d3d3d3;
+}
+.showMoreBtn{
+  color: var(--dark-color);
+}
+@media (min-width: 319px) and (max-width: 575px) {
+  .myPlaylist input{
+    color: var(--dark-color);
+    border: 0;
+    border-bottom: 1px solid #d3d3d3;
+  }
+}
+.helloTuneButtonMObile{
+  margin-right: -15px;
+  margin-left: -15px;
+  button.helloTune-icon{
+    width:100%; 
+    margin-top:1rem; 
+    border-radius:0; 
+    border-left-color:transparent;
+    border-right-color:transparent;
+    display: flex;
+    .icon-hello-tune{
+      margin-top: 0.80rem;
+    }
+  }
+}

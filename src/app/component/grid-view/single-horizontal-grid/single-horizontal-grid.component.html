@@ -1,0 +1,79 @@
+<div class="playlistWrapper position-relative w-100 float-left" *ngIf="inputData && inputData.items && inputData.items.length > 0" [ngClass]="{'mt-md-5 mb-md-0 my-4':viewType != 'listGridView'}">
+    <div class="d-flex justify-content-between align-items-center" [ngClass]="[viewType === 'listGridView'?'mb-4':'mb-3']">
+
+        <!-- for package/playlist/album/song -->
+        <a class="railHeading"  *ngIf="!searchFilter && inputData.type != 'RECO' && !isSearch && viewType != 'listGridView' && !inputData.seeAllLink" [ngClass]="(showSeeAll && (inputData.items.length > 6 || inputData.items.length >= 4 && inputData.total > 4 && mobileViewForPlaylist)) ? 'cursor-pointer' : 'cursor-text'" routerLink="{{seeAllLink}}">{{inputData.title | titlecase}}</a>
+        <a  *ngIf="showSeeAll && !isSearch && !inputData.seeAllLink && inputData.type != 'RECO' && (inputData.items.length > 6 || inputData.items.length >= 4 && inputData.total > 4 && mobileViewForPlaylist)" routerLink="{{seeAllLink}}"
+             class="seeAllBtn" (click)="seeAllClicked()">See All</a>
+        <!-- For Recommended Content  -->
+        <a class="railHeading"  *ngIf="!searchFilter && inputData.type === 'RECO' && !isSearch && viewType != 'listGridView'" [ngClass]="(showSeeAll && (inputData.items.length > 6 || inputData.items.length >= 4 && inputData.total > 4 && mobileViewForPlaylist)) ? 'cursor-pointer' : 'cursor-text'" routerLink="/music/my-music/{{inputData.title|lowercase | replaceWhiteSpace}}">{{inputData.title | titlecase}}</a>
+        <a class="seeAllBtn" *ngIf="showSeeAll && inputData.type === 'RECO' && (inputData.items.length > 6 || inputData.items.length >= 4 && inputData.total >4 && mobileViewForPlaylist)"
+            routerLink="/music/my-music/{{inputData.title|lowercase | replaceWhiteSpace}}"  (click)="seeAllClicked()">See All</a>
+        
+        <!-- Heading after search result page -->
+        <a class="railHeading" [queryParams]="{q:searchData,filter:inputData.id}" *ngIf= "inputData.type != 'RECO' && isSearch && !searchFilter && viewType!='listGridView'" routerLink="/music/packagesearch" [ngClass]="(showSeeAll && (inputData.items.length > 6 || inputData.items.length >= 4 && inputData.total > 4 && mobileViewForPlaylist)) ? 'cursor-pointer' : 'cursor-text'" >{{inputData.title | titlecase}}</a>
+        <h2 *ngIf="searchFilter" class="w-75 d-inline-block text-truncate">{{searchFilter|titlecase}}s for "{{inputData.title | titlecase}}"</h2>        
+        <a *ngIf="showSeeAll && isSearch && inputData.type != 'RECO' && (inputData.items.length > 6 || inputData.items.length >= 4 && inputData.total > 4 && mobileViewForPlaylist)"
+            routerLink="/music/packagesearch" [queryParams]="{q:searchData,filter:inputData.id}" (click)="addSearchResultMoreClick()"
+            class="seeAllBtn">See All</a>
+
+        <!-- where 'seeAllLink' property avaliable -->
+        <a class="railHeading" *ngIf= " inputData.seeAllLink && inputData.type != 'RECO' && !searchFilter && viewType!='listGridView'" routerLink="{{inputData.seeAllLink}}" [ngClass]="(showSeeAll && (inputData.items.length > 6 || inputData.items.length >= 4 && inputData.total > 4 && mobileViewForPlaylist)) ? 'cursor-pointer' : 'cursor-text'" >{{inputData.title | titlecase}}</a>
+        <h1 *ngIf="!searchFilter && viewType === 'listGridView'" class="w-75 d-inline-block text-truncate">{{inputData.title | titlecase}}</h1>       
+        <app-filter-list *ngIf="!searchFilter && viewType === 'listGridView' && customType!='PLAYLISTS'" [customType]="customType" [currentLanguage]="currentLanguage"></app-filter-list>
+        <a *ngIf="showSeeAll && inputData.seeAllLink && inputData.type != 'RECO' && (inputData.items.length > 6 || inputData.items.length >= 4 && inputData.total > 4 && mobileViewForPlaylist)"
+            routerLink="{{inputData.seeAllLink}}" class="seeAllBtn" (click)="seeAllClicked()">See All</a>
+    </div>
+
+    <div class="row" [ngClass]="{'scrollableSection':viewType === 'GRIDVIEW' && !mobileViewForPlaylist}" id="{{inputData.id}}"
+        (scroll)="scrollGridRail($event,inputData)">
+        <div class="col-6 col-sm-3 col-md-2 col-lg-2 mb-4" id="{{gridArr.id}}" *ngFor="let gridArr of this.inputData.items;let i=index"
+            (click)="singleHorizontalGridClicked(gridArr,i)">
+            <div class="insideGrid w-100 float-left">
+                <div class="playlistSong position-relative">
+                    <div class="defaultBg border-radius-10" [ngClass]="{'rounded-circle' : (inputData.title === 'Similar Artists' || inputData.railType === 'ARTIST' || inputData.id === 'ARTIST')}">
+                            <img appImgLazyLoad [isArtist]="(inputData.title === 'Similar Artists' || inputData.railType === 'ARTIST' || inputData.id === 'ARTIST')"
+                            class="img-fluid border-radius-10" [ngClass]="{'rounded-circle' : (inputData.title === 'Similar Artists' || inputData.railType === 'ARTIST' || inputData.id === 'ARTIST')}"
+                            src="{{gridArr.smallImage | customImageSize: 'SONG-GRID'}}" title="{{gridArr.title}}" alt="{{gridArr.title}}">
+                    </div>
+                    <div class="gridContent w-100 float-left pt-2">
+                        <a *ngIf="gridArr.type != 'PLAYLIST' && gridArr.type != 'USERPLAYLIST' && gridArr.type !== 'SHAREDPLAYLIST' && inputData.railType==='MOOD'" routerLink="/music/list/{{gridArr.title|lowercase | replaceWhiteSpace}}/{{gridArr.id | replaceCpIds :inputData.title}}"
+                             [ngClass]="{'text-center' : (inputData.title === 'Similar Artists' || inputData.railType === 'ARTIST' || inputData.id === 'ARTIST')}"
+                            class="dark-text-color w-100 float-left text-truncate" title="{{gridArr.title}}">{{gridArr.title}}
+                        </a>
+                        <a *ngIf="gridArr.type != 'PLAYLIST' && gridArr.type != 'USERPLAYLIST' && gridArr.type !== 'SHAREDPLAYLIST' && inputData.railType!=='MOOD'" routerLink="/music/{{gridArr.type | lowercase}}/{{gridArr.title|lowercase | replaceWhiteSpace}}/{{gridArr.id | replaceCpIds :inputData.title}}"
+                             [ngClass]="{'text-center' : (inputData.title === 'Similar Artists' || inputData.railType === 'ARTIST' || inputData.id === 'ARTIST')}"
+                            class="dark-text-color w-100 float-left text-truncate" title="{{gridArr.title}}">{{gridArr.title}}
+                        </a>
+                        <a *ngIf="gridArr.type === 'PLAYLIST'" routerLink="/music/playlist/{{gridArr.title|lowercase | replaceWhiteSpace}}/{{gridArr.id | replaceCpIds :inputData.title}}"
+                             [ngClass]="{'text-center' : (inputData.title === 'Similar Artists' || inputData.railType === 'ARTIST' || inputData.id === 'ARTIST')}"
+                            class="dark-text-color w-100 float-left text-truncate" title="{{gridArr.title}}">{{gridArr.title}}
+                        </a>
+                        <a *ngIf="gridArr.type === 'USERPLAYLIST'|| gridArr.type === 'SHAREDPLAYLIST'" routerLink="/music/my-music/my-playlists/{{gridArr.title|lowercase | replaceWhiteSpace}}/{{gridArr.id}}"
+                             [ngClass]="{'text-center' : (inputData.title === 'Similar Artists' || inputData.railType === 'ARTIST' || inputData.id === 'ARTIST')}"
+                            class="dark-text-color w-100 float-left text-truncate" title="{{gridArr.title}}">{{gridArr.title}}
+                        </a>
+                        </div> 
+                    <app-hover-state [songInfo]="gridArr" [package]="inputData" [screenId]="screenId" (shareSongClickEvent)="shareSongEvent(gridArr)"
+                        (overflowSongClickEvent)="overflowSongEvent(gridArr)">
+                    </app-hover-state>
+                </div>
+            </div>
+        </div>
+        <div class="showMoreBtn w-100 text-center mt-4" id="showMoreBtn" *ngIf="viewType === 'listGridView' && inputData && inputData.type != 'RECO' && inputData.items.length != inputData.total">
+            <a (click)="showMore()">Show More</a>
+        </div>
+
+        <!-- For Recommended Content  -->
+        <div class="showMoreBtn w-100 text-center mt-4" id="showMoreBtn" *ngIf="viewType === 'listGridView' && inputData && inputData.type === 'RECO' && recommendationElCount == inputData.total">
+            <a (click)="showMore()">Show More</a>
+        </div>
+
+    </div>
+    <div class="prev position-absolute" *ngIf="viewType != 'listGridView' && !hideLeftRailArrow" (click)="scrollRailLeft(inputData.id)">
+        <i class="icon-ic_global_left_chevron_dark position-absolute rounded-circle"></i>
+    </div>
+    <div class="next position-absolute" *ngIf="viewType != 'listGridView' && !hideRightRailArrow" (click)="scrollRailRight(inputData.id)">
+        <i class="icon-ic_chevron_right_dark position-absolute rounded-circle"></i>
+    </div>
+</div>    

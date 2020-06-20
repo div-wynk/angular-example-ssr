@@ -1,0 +1,104 @@
+@import '../../../assets/css/var';
+.main {
+    margin-right: -15px;
+    margin-left: -15px;
+    overflow: hidden;
+}
+
+.bannerWrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    width: calc(100% - 200px);
+    align-items: center;
+    display: flex;
+}
+
+.horizTranslate {
+    transition: transform 1s ease-in-out;
+}
+
+.items {
+    position: relative;
+    width: 100%;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    align-items: center;
+    display: flex;
+}
+
+.items:hover {
+    animation-play-state: paused;
+}
+
+.item {
+    display: flex;
+    @include border-radius(20px);
+    margin: 0px 10px;
+    vertical-align: top;
+    position: relative;
+    img {
+        @include border-radius(20px);
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+        overflow: hidden;
+    }
+}
+
+.prev,
+.next {
+    top: 50%;
+    background-image: none;
+    opacity: 1;
+    width: 21.3%;
+    height: 100%;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.next i,
+.prev i {
+    opacity: 1;
+    visibility: visible;
+    top: 50%;
+}
+
+.prev i {
+    left: 40%;
+}
+
+.next i {
+    right: 40%;
+}
+
+@media(max-width: 319px){
+    .bannerWrapper{
+        display: none
+    }
+}
+
+@media (min-width:200px) and (max-width: 768px) {
+    .bannerWrapper {
+        max-width: 1400px;
+        width: calc(100% - 40px);
+    }
+    .item {
+        @include border-radius(10px);
+        margin: 0px 5px;
+    }
+    .prev,
+    .next {
+        display: none;
+    }
+    .item img {
+        @include border-radius(10px);
+    }
+}

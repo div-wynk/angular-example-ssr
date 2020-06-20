@@ -1,0 +1,67 @@
+@import '../../../assets/css/var';
+.hoverState {
+    visibility: hidden;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-image: linear-gradient(to top, #0b0d0f, rgba(11, 13, 15, .35));
+    @include transition-animation(all ease-in-out .2s);
+    opacity: 0;
+    cursor: pointer;
+}
+
+.splay {
+    width: 40px;
+    height: 40px;
+    padding: 10px 9px 9px;
+    @include transition-animation(all ease-in-out .2s);
+}
+
+.icon-ic_global_play_dark:before {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.hoverState i.splay {
+    color: var(--brand-color);
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: $transform scale(1);
+    margin: 0px auto;
+}
+
+.hoverState i.splay:hover {
+    transform: $transform scale(1.10);
+}
+
+.hoverState i,
+.hoverState span {
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 2px;
+}
+
+.hoverState .shareIcon,
+.hoverState .overflowIcon {
+    @include transition-animation(all ease-in-out .2s);
+}
+
+.hoverState .shareIcon:hover,
+.hoverState .overflowIcon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.shareIcon,
+.overflowIcon {
+    bottom: 6px;
+}
+
+.shareIcon {
+    left: 7px;
+}
+
+.overflowIcon {
+    right: 7px;
+}

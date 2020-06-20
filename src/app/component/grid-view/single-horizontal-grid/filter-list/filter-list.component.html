@@ -1,0 +1,48 @@
+<div class="language-toggle-btn position-relative" *ngIf="customType != null">
+  <button class="button white" (click)="toggleMenu()">
+    <span *ngIf="currentLanguage; else allSelected">
+
+      {{currentLanguage | titlecase }}     
+    </span>
+    <ng-template #allSelected>
+      All
+    </ng-template>
+    <i
+      class="{{
+        isCollapsed
+          ? 'icon-ic_global_down_chevron_dark'
+          : 'icon-ic_global_up_chevron_dark'
+      }}"
+    ></i>
+  </button>
+  <ul
+    (click)="toggleMenu()"
+    class="lang-dropdown-menu position-absolute border-radius-10"
+    [ngStyle]="{ display: isCollapsed ? 'none' : 'block' }"
+  >
+    <span *ngIf="customType=='ALBUMS'"> 
+      <li>
+          <a
+          class="border-radius-5 d-inline-block"
+          routerLink="/music/{{ customType | lowercase }}"
+          ><span class="mr-1">All Albums</span> 
+          </a>
+      </li>
+    </span>
+    <span *ngFor="let item of languageMapKeyArray; let i = index">
+      <li
+        *ngIf="languageMap[item] && languageMap[item][langTypeMap[customType]]"
+      >
+        <a
+          class="border-radius-5 d-inline-block"
+          routerLink="/music/{{ customType | lowercase }}/{{ item }}"
+          ><span class="mr-1">{{ languageMap[item].name }}</span> {{ item | titlecase}}
+          <i
+            class="icon-ic_global_check float-right"
+            *ngIf="currentLanguage == item"
+          ></i
+        ></a>
+      </li>
+    </span>
+  </ul>
+</div>

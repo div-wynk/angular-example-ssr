@@ -1,0 +1,29 @@
+<div class="similarSection w-100 float-left mt-5" *ngIf="inputData && inputData.items && ((screenId === 'SongInfoPage' && inputData.items.length >= 3) || (screenId === 'ArtistInfoPage' && inputData.items.length > 0))">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <h3 *ngIf="viewType === 'gridView'">{{inputData.title | titlecase}}</h3>
+        <h3 *ngIf="viewType === 'listView'">{{inputData.title | titlecase}} Songs</h3>
+        <a class="seeAllBtn" *ngIf="showSeeAll && viewType === 'gridView'">See All</a>
+    </div>
+    <ul class="rect-grid scrollableSection" (scroll)="slideLeftRight($event, inputData.id)" id="{{inputData.id}}">
+        <li class="mb-4" *ngFor="let similar of inputData.items" (click)="rectGrid2x6Clicked(similar)">
+            <div class="similarSong position-relative">
+                <div *ngIf="modifyMobileView" class="defaultBg border-radius-10" (click)="navigateToSongPage(similar)">
+                    <img appImgLazyLoad class="img-fluid float-left border-radius-10 w-100" src="{{similar.smallImage | customImageSize: 'SONG-MD'}}" alt="{{similar.title}}" title="{{similar.title}}">
+                </div>
+                <div *ngIf="!modifyMobileView" class="defaultBg border-radius-10">
+                    <img appImgLazyLoad class="img-fluid float-left border-radius-10 w-100" src="{{similar.smallImage | customImageSize: 'SONG-MD'}}" alt="{{similar.title}}" title="{{similar.title}}">
+                    <app-hover-state [songInfo]="similar" [package]="inputData" [screenId]="screenId" (shareSongClickEvent)="shareSongEvent(similar)" (overflowSongClickEvent)="overflowSongEvent(similar)"></app-hover-state>
+                </div>
+                <div class="w-100 float-left pt-2">
+                    <a class="dark-text-color w-100 float-left text-truncate" routerLink="/music/{{similar.type | lowercase}}/{{similar.title|lowercase | replaceWhiteSpace}}/{{similar.id | replaceCpIds}}" title="{{similar.title}}">
+                        {{similar.title}}
+                    </a>
+                    <div class="light-text-color w-100 float-left text-truncate" *ngIf="similar.subtitle" title="{{similar.subtitle}}">{{similar.subtitle}}</div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="showMoreBtn w-100 text-center mt-2" id="showMoreBtn" *ngIf="viewType === 'listView' && inputData && inputData.items.length != inputData.total">
+        <a (click)="showMore()">Show More</a>
+    </div>
+</div>

@@ -1,10 +1,20 @@
 export const environment = {
   production: true,
-  application:
-  {
-    name: 'angular-starter',
-    angular: 'Angular 9.1.9',
-    bootstrap: 'Bootstrap 4.5.0',
-    fontawesome: 'Font Awesome 5.13.0',
-  }
+  CONTENT_URL: 'https://content.wynk.in/music',
+  SAPI_URL: 'https://sapi.wynk.in/music',
+  SEARCH_URL:'https://search.wynk.in/music',
+  PLAYLIST_UPDATE:'https://usercontent.wynk.in/usercontent',
+  RECOMMANDATION:'https://reco.wynk.in',
+  WEB_SITE_URL:'https://wynk.in',
+  CURATED_ARTIST:'https://wynk.in/music',
+  SSR_URL:'http://localhost:9000',
+  APP_VERSION: '3.4.0.0',
+  enableErrorHandler: true,
+  ERROR_TRACE_URL: 'https://web-retrace.wynk.in/retrace',
+  GRAPH_URL: 'https://graph.wynk.in/graph/v4',
+  USER_CONTENT_URL:'https://usercontent.wynk.in',
+  STREAM_URL: 'https://stream.wynk.in/song/v4/stream',
+  LOGIN_URL: 'https://login.wynk.in/music',
+  PING: 'https://ping.wynk.in',
+  IMG_URI: 'https://img.wynk.in/webassets/'
 };

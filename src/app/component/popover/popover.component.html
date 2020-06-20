@@ -1,0 +1,80 @@
+<!-- <ul class="drop-overflow pt-1 pb-1 border-radius-10" *ngIf="popoverOrigin === 'song-overflow';else pageHeaderOverflow">
+    <li *ngIf="screenId != 'Queue'" (click)="getPopOverEvents('nonstopmix')" non-stop-mix [origin]="screenId" [song]="songInfo">
+        <a>Start Non-stop Mix</a>
+    </li>
+    <li *ngIf="screenId != 'Queue' || dropZone != 'Queue'" (click)="getPopOverEvents('Play_Next')" play-next [song]="songInfo" [dropZone]="dropZone">
+        <a>Play Next</a>
+    </li>
+    <li *ngIf="screenId != 'Queue'" (click)="getPopOverEvents('Add_To_Queue')" add-song-to-queue [song]="songInfo">
+        <a>Add to Queue</a>
+    </li>
+    <li (click)="getPopOverEvents('Get_Info');checkAndClosePlayer();" routerLink="/music/song/{{songInfo.title |lowercase |replaceWhiteSpace}}/{{songInfo.id | replaceCpIds}}">
+        <a>View Song Details</a>
+    </li>
+    <li *ngIf="songInfo && songInfo.shortUrl" (click)="getPopOverEvents('Share');socialShare(songInfo)">
+        <a>Share</a>
+    </li>
+    <li *ngIf="songInfo && songInfo.isHt" (click)="appsFlyerInstallEvents('hellotune');getPopOverEvents('setashellotunes');">
+        <a>Set As Hellotune</a>
+    </li>
+    <li *ngIf="songInfo && showFollow && isFollowable" (click)="followUnfollowClick();getPopOverEvents('Follow')" class="shareInOverflow">
+        <a>{{ isFollowed ? 'Unfollow' : 'Following'}}</a>
+    </li>
+    <li (click)="addPlaylist($event);getPopOverEvents('Add_To_Playlist');">
+        <a>Add To Playlist</a>
+    </li>
+    <li *ngIf="!hideDownload" (click)="appsFlyerInstallEvents('Download');getPopOverEvents('Download');">
+        <a>Download</a>
+    </li>
+    <li *ngIf="screenId === 'Queue' && dropZone === 'Queue'" (click)="getPopOverEvents('Remove_Song');removeSong(songInfo);">
+        <a>Remove</a>
+    </li>
+    <li *ngIf="screenId === 'USERPLAYLIST'" (click)="getPopOverEvents('Remove_Song');removeSong(songInfo);">
+        <a>Remove Song</a> 
+    </li>
+</ul>
+
+<ng-template #pageHeaderOverflow>
+
+    <ul class="drop-overflow pt-1 pb-1 border-radius-10">
+        <li *ngIf="songInfo.type === 'SONG'" (click)="getPopOverEvents('nonstopmix')" non-stop-mix [origin]="screenId" [song]="songInfo">
+            <a>Start Non-stop Mix</a>
+        </li>
+        <li *ngIf="songInfo.type === 'SONG'" (click)="getPopOverEvents('Play_Next')" play-next [song]="songInfo">
+            <a>Play Next</a>
+        </li>
+        <li *ngIf="screenId != 'Queue'" (click)="getPopOverEvents('Add_To_Queue')" add-song-to-queue [song]="songInfo">
+            <a>Add to Queue</a>
+        </li>
+        <li *ngIf="songInfo && songInfo.shortUrl && showShare" (click)="socialShare(songInfo);getPopOverEvents('Share')" class="shareInOverflow">
+            <a>Share</a>
+        </li>
+        <li *ngIf="songInfo.type === 'SONG' && songInfo.isHt" (click)="appsFlyerInstallEvents('hellotune');getPopOverEvents('setashellotunes');">
+            <a>Set As Hellotune</a>
+        </li>
+        <li *ngIf="(screenId === 'USERPLAYLIST' && songInfo.isPublic && !hasEditPermission || showFollow && screenId != 'USERPLAYLIST') && isFollowable"
+            (click)="followUnfollowClick();getPopOverEvents('Follow')" class="shareInOverflow">
+            <a>{{isFollowed ? 'Unfollow' : 'Follow'}}</a>
+        </li>
+        <li *ngIf="screenId === 'Queue'" (click)="getPopOverEvents('Get_Info');checkAndClosePlayer()" routerLink="/music/song/{{songInfo.title |lowercase |replaceWhiteSpace}}/{{songInfo.id | replaceCpIds}}">
+            <a>View Song Details</a>
+        </li>
+        <li *ngIf="songInfo.type === 'SONG'" (click)="addPlaylist($event);getPopOverEvents('Add_To_Playlist');">
+            <a>Add to Playlist</a>
+        </li>
+        <li *ngIf="songInfo.type != 'SONG'" (click)="addPlaylist($event);getPopOverEvents('Add_To_Playlist');">
+            <a>Save Playlist</a>
+        </li>
+        <li *ngIf="screenId === 'USERPLAYLIST' && songInfo.isPublic && hasEditPermission" (click)="playlistVisibilityStatus('make-private');">
+            <a>Make Playlist Private</a>
+        </li>
+        <li *ngIf="screenId === 'USERPLAYLIST' && !songInfo.isPublic && hasEditPermission" (click)="playlistVisibilityStatus('make-public');">
+            <a>Make Playlist Public</a>
+        </li>
+        <li *ngIf="screenId === 'USERPLAYLIST' &&  hasEditPermission" (click)="deletePlaylist()">
+            <a>Delete Playlist</a>
+        </li>
+    </ul>
+
+</ng-template> -->
+<h6>popover component</h6>

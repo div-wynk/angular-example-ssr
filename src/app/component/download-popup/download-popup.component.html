@@ -1,0 +1,27 @@
+<button type="button" class="close position-absolute d-flex align-items-center justify-content-center" aria-label="Close"
+    (click)="ngbActiveModal.dismiss('Cross click')">
+    <i class="icon-ic_close_web_mobile rounded-circle"></i>
+</button>
+<div class="img-cont"></div>
+
+<div class="download-popup w-100 d-inline-block text-center">
+    
+    <div class="w-100 d-inline-block down-pop-info pb-3 pt-2">
+        <h3>Install Wynk Music App</h3>
+        <p *ngIf="viewType === 'download'">To download this {{popupHeading}} & for the best music experience, install Wynk Music app</p>
+        <p *ngIf="viewType === 'follow'">To follow this {{popupHeading}} & stay updated, install Wynk Music app</p>
+        <p *ngIf="viewType === 'hellotune'">To set this song as hellotune for your Airtel number, install Wynk Music app</p>
+    </div>
+
+    <div *ngIf="isMobileView" class="install-button">
+        <img appImgLazyLoad alt="" title="Google App" width="150" height="45" src="https://img.wynk.in/unsafe/150x45/filters:no_upscale():format(png):quality(100)/https://s3.ap-south-1.amazonaws.com/assets.wynk.in/images/wap-assets/footer-v2-but-play.png"
+            (click)="navigateToApp(true)" />
+        <img appImgLazyLoad class="ml-2" alt="" title="IOS App" width="150" height="45" src="https://img.wynk.in/unsafe/150x45/filters:no_upscale():format(png):quality(100)/https://s3.ap-south-1.amazonaws.com/assets.wynk.in/images/wap-assets/footer-v2-but-app.png"
+            (click)="navigateToApp(false)" />
+    </div>
+
+    <div *ngIf="!isMobileView" class="install-button">
+        <button class="red" (click)="openStoreUsingAppsflyer()">Install Now</button>
+    </div>
+
+</div>

@@ -1,0 +1,99 @@
+
+.language-toggle-btn{
+    button{
+        padding-left: 20px;
+    }
+
+    .lang-dropdown-menu{
+        width: 580px;
+        left: auto;
+        right: 0px;
+        padding: 0px 20px 20px 0px;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+        -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+        -moz-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+        -ms-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+        -o-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+        z-index: 9;
+        margin-top: 1rem;
+        li{
+            width:33.3%;
+            display:inline-block;
+            padding-left:20px;
+            margin-top:1rem;
+            a{
+                width:100%;
+                padding: 14px 12px;
+                font-size:11px;
+                transition: all ease-in-out 0.3s;
+                -webkit-transition: all ease-in-out 0.3s;
+                -moz-transition: all ease-in-out 0.3s;
+                -o-transition: all ease-in-out 0.3s;
+                -ms-transition: all ease-in-out 0.3s;
+                span{
+                    font-weight: 700;
+                   
+                    font-size:13px;
+                    vertical-align:middle;
+                }
+                i{
+                    margin-top:8px;
+                }
+               
+            }
+
+        }
+        
+    }
+}
+
+@media (max-width:575px){
+ .language-toggle-btn{
+    .lang-dropdown-menu{
+        width: 95vw;
+        li{
+            width:50%;
+        }
+    }
+    button{
+        width: 125px;
+    }
+}
+}
+
+@media (max-width:475px){
+    .language-toggle-btn{
+       .lang-dropdown-menu{
+           width: 95vw;
+           padding: 0px 10px 10px 0px;
+           li{
+               width:50%;
+               padding-left: 10px;
+                margin-top: .5rem;
+                a{
+                    i{
+                        font-size: 16px;
+                    }
+                }
+           }
+       }
+   }
+   }
+
+   @media (max-width:375px){
+    .language-toggle-btn{
+    .lang-dropdown-menu{
+        width: 97vw;
+        right: -10px;
+        li{
+            width:50%;
+            a{
+                padding: 10px;
+                i{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+   }

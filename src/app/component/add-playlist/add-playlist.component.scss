@@ -1,0 +1,53 @@
+@import '../../../assets/css/var';
+.user-playlists {
+    height: 340px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.header h4 {
+    line-height: 28px;
+}
+
+.subText {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.smallImage img {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+}
+
+.list-action-icon {
+    cursor: pointer;
+}
+
+.checkAdd,
+.checkIcon {
+    width: 32px;
+    height: 32px;
+    @include transition-animation(all ease-in-out .2s);
+}
+
+
+.close {
+    top: -8px;
+    right: -8px;
+}
+
+.close i {
+    font-size: 30px;
+}
+
+.createPlaylist .footer button {
+    min-width: 110px;
+}
+
+.playlist-error{
+    color: var(--error-color);
+}
+
+.playlistBody {
+    overflow: hidden;
+}

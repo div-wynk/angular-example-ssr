@@ -1,0 +1,52 @@
+<!-- <app-single-horizontal-rail-shimmering *ngIf="!inputData"></app-single-horizontal-rail-shimmering> -->
+<div class="railWrapper w-100 float-left position-relative mt-md-5 mb-md-0 my-4" *ngIf="inputData && railData && railData.length > 0" [ngClass]="{'helltune-rail': !inputData.title}">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        
+        <!-- for package/playlist/album/song -->
+        <a  class="railHeading" *ngIf="!isSearch && inputData.type != 'RECO' && !inputData.seeAllLink" [ngClass]="(showSeeAll && railData.length > 8) ? '' : 'cursor-text'" >{{inputData.title | titlecase}}</a>
+        <a class="seeAllBtn" *ngIf="showSeeAll && !isSearch && inputData.type != 'RECO' && !inputData.seeAllLink && railData.length > 8" (click)="seeAllClicked()">See All</a>
+        
+        <!-- For Recommended Content  -->
+        <a  class="railHeading" *ngIf="inputData.type === 'RECO'" [ngClass]="(showSeeAll && railData.length > 8) ? '' : 'cursor-text'" routerLink="/music/my-music/{{inputData.title|lowercase | replaceWhiteSpace}}">{{inputData.title | titlecase}}</a>
+        <a class="seeAllBtn" *ngIf="showSeeAll && inputData.type === 'RECO' && railData.length > 8"
+            routerLink="/music/my-music/{{inputData.title|lowercase | replaceWhiteSpace}}" (click)="seeAllClicked()">See All</a>
+
+        <!-- For Search Page  -->
+        <a [queryParams]="{q:searchData,filter:inputData.id}" *ngIf="isSearch  && inputData.type != 'RECO'" class="railHeading"  [ngClass]="(showSeeAll && railData.length > 8) ? '' : 'cursor-text'" routerLink="/music/packagesearch" >{{inputData.title | titlecase}}</a>
+        <a class="seeAllBtn" *ngIf="showSeeAll && isSearch && railData.length > 8 && inputData.type != 'RECO'"
+            routerLink="/music/packagesearch" [queryParams]="{q:searchData,filter:inputData.id}" (click)="addSearchResultMoreClick()">See All</a>
+
+        <!-- where 'seeAllLink' property avaliable -->
+        <a  class="railHeading" *ngIf = "inputData.seeAllLink && inputData.type != 'RECO'"  [ngClass]="(showSeeAll && railData.length > 8) ? '' : 'cursor-text'" routerLink="{{inputData.seeAllLink}}" >{{inputData.title | titlecase}}</a>
+        <a *ngIf="showSeeAll && inputData.seeAllLink && railData.length > 8 && inputData.type != 'RECO'" routerLink="{{inputData.seeAllLink}}"
+            class="seeAllBtn" (click)="seeAllClicked()">See All</a>
+    </div>
+
+    <div class="myWorkContent" (scroll)="slideLeftRight($event,inputData)" id="{{inputData.id}}">
+        <ul class="rail" id="{{inputData.id}}_smoothScroll">
+            <li *ngFor="let railArr of this.railData;let i=index" (click)="singleHorizontalRailClicked(railArr,i)">
+                <div *ngIf="modifyMobileView" class="defaultBg border-radius-10 position-relative railImgWrapper" (click)="navigateToSongPage(railArr)">
+                    <img appImgLazyLoad class="img-fluid railImg border-radius-10" src="{{railArr.smallImage | customImageSize: 'SONG-MD'}}"
+                        title="{{railArr.title}}" alt="{{railArr.title}}">
+                </div>
+                <div *ngIf="!modifyMobileView" class="defaultBg border-radius-10 position-relative railImgWrapper">
+                    <img appImgLazyLoad class="img-fluid railImg border-radius-10" src="{{railArr.smallImage | customImageSize: 'SONG-MD'}}"
+                        title="{{railArr.title}}" alt="{{railArr.title}}">
+                    <app-hover-state *ngIf="!hideHoverState" [songInfo]="railArr" [package]="inputData" [screenId]="screenId" (shareSongClickEvent)="shareSongEvent(railArr)" (overflowSongClickEvent)="overflowSongEvent(railArr)"></app-hover-state>
+                </div>
+                <div class="railContent w-100 float-left pt-2">
+                    <a class="dark-text-color w-100 float-left text-truncate" title="{{railArr.title}}">
+                        {{railArr.title}}
+                    </a>
+                    <div class="light-text-color w-100 float-left text-truncate pointer-text" title="{{railArr.subtitle}}">{{railArr.subtitle}}</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="prev position-absolute" *ngIf="!hideLeftRailArrow" (click)="scrollRailLeft(inputData.id)">
+        <i class="icon-ic_global_left_chevron_dark position-absolute rounded-circle"></i>
+    </div>
+    <div class="next position-absolute" *ngIf="!hideRightRailArrow" (click)="scrollRailRight(inputData.id)">
+        <i class="icon-ic_chevron_right_dark position-absolute rounded-circle"></i>
+    </div>
+</div>

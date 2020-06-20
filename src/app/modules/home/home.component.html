@@ -1,0 +1,23 @@
+<div id="appflyer-show">
+        <div id="my-banner"></div>
+    </div>
+     <!-- <app-top-nav (languageChangedAgain)="languageChanged($event)" [config]="config"></app-top-nav> -->
+    <div *ngIf="this._router.url.includes('/airtel-hellotunes'); else homeRoute">
+            <router-outlet></router-outlet>
+            <div class="container-fluid">
+                <!-- <app-footer></app-footer> -->
+            </div>
+    </div> 
+    
+    <ng-template #homeRoute >
+        <div class="container-fluid" [ngClass]="{'sideSpacer':this._router.url.includes('/music/')}" >
+            <app-loader *ngIf="loaderService.showLoader"></app-loader>
+        
+            <div style="min-height: 60vh;">
+                <router-outlet></router-outlet>
+            </div>
+            <!-- <app-queue></app-queue>
+            <app-footer></app-footer> -->
+        </div>
+    </ng-template>
+    
