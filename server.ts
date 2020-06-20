@@ -7,13 +7,21 @@ import 'zone.js/dist/zone-node';
 import { ngExpressEngine } from '@nguniversal/express-engine';
 import * as express from 'express';
 import { join } from 'path';
-
 import { AppServerModule } from './src/main.server';
 import { APP_BASE_HREF } from '@angular/common';
 import { existsSync } from 'fs';
-
+const MockBrowser = require('mock-browser').mocks.MockBrowser;
+function btoa(str){
+  Buffer.from(str).toString('base64')
+}
 // The Express app is exported so that it can be used by serverless Functions.
 export function app() {
+  const mock = new MockBrowser();
+  global['navigator'] = mock.getNavigator();
+  global['window'] = mock.getWindow();
+  global['document'] = mock.getDocument();
+  global['btoa'] = btoa;
+  global['history'] = mock.getHistory();
   const server = express();
   const distFolder = join(process.cwd(), 'dist/angular-starter/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';

@@ -126,8 +126,10 @@ export class CommonService {
 
   setDeviceId(id) {
     this.deviceId = id;
-    this.spitOut_1();
-    this.spitOut_2();
+    if(!this._localStorageWrapperService.isPlatformServer()){
+      this.spitOut_1();
+      this.spitOut_2();
+    }
   }
 
   getDeviceId() {
