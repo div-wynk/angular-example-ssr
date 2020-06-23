@@ -1,0 +1,246 @@
+@import '../../../assets/css/var';
+.wynklogo {
+    height: 31px;
+    object-fit: contain;
+}
+
+.container-fluid.sideSpacer {
+    padding-left: 5px;
+    padding-right: 0px;
+}
+
+.rectangleShadow {
+    box-shadow: 0 3px 6px 0 rgba(40, 47, 54, 0.1);
+    -webkit-box-shadow: 0 3px 6px 0 rgba(40, 47, 54, 0.1);
+    -moz-box-shadow: 0 3px 6px 0 rgba(40, 47, 54, 0.1);
+    -o-box-shadow: 0 3px 6px 0 rgba(40, 47, 54, 0.1);
+    -ms-box-shadow: 0 3px 6px 0 rgba(40, 47, 54, 0.1);
+    border-top: 3px solid var(--brand-color);
+    height: 70px;
+    padding-left: 10px;
+}
+
+.searchWrapper {
+    width: 360px;
+}
+
+.search {
+    height: 40px;
+    border: solid 1px rgba(40, 47, 54, 0.15);
+    padding: 0px 15px 0px 40px;
+}
+
+.searchBtn, .navbar-nav li a, .signin, .dropdownMenu li,
+.dropdownMenu li a, .userSection, .language-icon, .close_web, .mobSearchIcon{
+    cursor: $cursor;
+}
+
+.language-icon{
+    display: inline-block;
+}
+
+.mobile-sign-in{
+    display: none;
+}
+
+.searchBtn {
+    left: 10px;
+    top: 9px;
+}
+
+.navbar-nav li a,
+.signin {
+    text-transform: uppercase;
+    font-size: $font-size-14;
+    font-weight: 500;
+    @include transition-animation(all ease-in-out .2s);
+}
+
+.navbar-nav li a{
+    padding:20px 0px;
+}
+
+.dropdownMenu {
+    min-width: 220px;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+    -moz-box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+    top: 30px;
+    padding: 5px 0px;
+    @include transition-animation(all ease-in-out .2s);
+    line-height: 40px;
+}
+
+.dropdownMenu li {
+    line-height: 25px;
+}
+
+.dropdownMenu li,
+.dropdownMenu li a {
+    width: 100%;
+    display: inline-block;
+}
+
+.dropdownMenu li a {
+    padding: 0px;
+    text-transform: capitalize;
+    font-weight: normal;
+    padding: 7px 15px;
+}
+
+
+.userDetails {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.userDetails img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.userSection i {
+    vertical-align: text-bottom;
+}
+
+.close_web {
+    top: 20px;
+    right: 8px;
+}
+
+.mobSearchIcon {
+    display: none;
+}
+
+.searchMobWrap {
+    display: none;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+}
+
+.searchMobWrap input {
+    height: 60px;
+}
+
+.mobInsideSearchBtn {
+    top: 19px;
+    left: 8px;
+}
+
+.close_Mob {
+    top: 31px;
+    right: 15px;
+}
+.dark-mode-icon img{
+    cursor: pointer;
+}
+.downloadApp {
+    .dropdownMenu{
+        min-width: 125px;
+    }
+}
+@media (max-width: 991.98px) {
+    .navbar-light .navbar-toggler-icon {
+        background-image: url(../../../assets/images/mobileMenu.svg);
+        width: 26px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        display: none;
+    }
+    .hamburgerView {
+        opacity: .9;
+        top: 0px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999;
+    }
+    .closeBtn {
+        font-size: 30px;
+        color: #9da0a3;
+        margin-left: -6px;
+    }
+    .hamburgerViewNav li {
+        margin-top: 25px;
+    }
+    .hamburgerViewNav li a {
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .circleIcons {
+        bottom: 20px;
+        left: 25px;
+        right: 0px;
+    }
+   
+ 
+}
+
+@media (max-width: 815px) {
+    .searchWrapper {
+        width: 315px;
+    }
+}
+@media(min-width:768px) and (max-width:815px){
+   .navbar .navbar-brand{
+        margin-right: 2rem !important;
+    }
+}
+@media (max-width: 767px) {
+    .wynklogo {
+        margin-top: -6px;
+        height: 28px;
+    }
+    .navbar button {
+        margin-right: 0px;
+        border: 0px;
+        padding: 0px;
+    }
+    .rectangleShadow {
+        height: 60px;
+    }
+    .navbar-brand {
+        padding: 0px;
+    }
+    .navbar-toggler-icon {
+        width: 1.4em;
+        height: 1.4em;
+    }
+    .mobSearchIcon {
+        display: inline-block;
+    }
+    .searchWrapper {
+        display: none;
+    }
+}
+
+@media (max-width: 575px) {
+    .signin, .language-icon {
+        display: none;
+    }
+    
+    .mobile-sign-in{
+        display: inline-block;
+    }
+}
+
+@media (max-width: 375px) {
+    .wynklogo{
+        height: 23px;
+    }
+}
+
+@media (max-width: 320px) {
+    .wynklogo {
+        height: 20px;
+    }
+    .navbar{
+        padding: 0.5rem ;
+    }
+}

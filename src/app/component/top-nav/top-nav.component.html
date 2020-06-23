@@ -1,0 +1,186 @@
+<nav class="navbar sticky-top navbar-expand-lg navbar-light mb-3 mb-sm-4 mb-md-5 rectangleShadow" id="navbar">
+    <div class="container-fluid sideSpacer">
+        <div class="d-flex mr-auto align-items-center">
+            <button aria-label="Hamburger menu" class="navbar-toggler mr-3" type="button" (click)="hamburgerNavbar(true)">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-0 mr-md-0 mr-md-5 pt-0" routerLink="/music">
+                <img src="../../../{{'wynkLogo' | iconTheme: theme }}" class="wynklogo" title="Wynk Music" alt="Wynk Music">
+            </a>
+
+            <ul class="navbar-nav position-relative">
+                <li>
+                    <a routerLink="/music">Home</a>
+                </li>
+                <li class="ml-4" (mouseover)="toggleMenu(false,false)" (mouseleave)="toggleMenu(true,false)">
+                    <a routerLink="/music/my-music">My Music
+                        <!-- <i class="icon-ic_global_down_chevron_dark"></i> -->
+                    </a>
+                    <ul (click)="toggleMenu(true,false)" (mouseleave)="toggleMenu(true,false)" class="dropdownMenu position-absolute border-radius-10" [ngStyle]="{'display': isCollapsedMyMusic ? 'none': 'block'}">
+                        <li>
+                            <a routerLink="/music/my-music/my-playlists">My Playlists</a>
+                        </li>
+                        <li>
+                            <a routerLink="/music/my-music/recently-played">Recently Played Songs</a>
+                        </li>
+                        <li>
+                            <a routerLink="/music/my-music/followed-artists">Followed Artists</a>
+                        </li>
+                        <li>
+                            <a routerLink="/music/my-music/followed-playlists">Followed Playlists</a>
+                        </li>
+                        <li>
+                            <a routerLink="/music/my-music/recommended-songs">Recommended Songs</a>
+                        </li>
+                        <li>
+                            <a routerLink="/music/my-music/all-downloaded">Downloaded Songs</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="ml-4 downloadApp" (mouseover)="toggleMenu(false,true)" (mouseleave)="toggleMenu(true,true)">
+                    <a routerLink="/music/my-music">Download App
+                        <!-- <i class="icon-ic_global_down_chevron_dark"></i> -->
+                    </a>
+                    <ul (click)="toggleMenu(true,true)" (mouseleave)="toggleMenu(true,true)" class="dropdownMenu position-absolute border-radius-10" [ngStyle]="{'display': isCollapsedDownloadApp ? 'none': 'block'}">
+                        <li>
+                            <a (click)="navigateToApp(true)">For Android</a>
+                        </li>
+                        <li>
+                            <a (click)="navigateToApp(false)">For Ios</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+
+        <div class="desktopNav d-flex justify-content-between align-items-center">
+            <div class="position-relative searchWrapper" *ngIf="!isMobileViewForHeader">
+                <input class="search w-100 d-inline-block border-radius-5" maxlength="60" type="search" placeholder="Search for music you love!"
+                    name="searchinput" id="searchinput" #inputSearchText (focus)="openSearchComponent($event.target.value)" (keydown.enter)="navigateToSearchDetails($event.target.value)"
+                    (blur)="closeSearchComponent()" autocomplete="off" (keyup)="searchBoxInputValue()" aria-label="Search">
+                <div class="searchBtn position-absolute">
+                    <i class="icon-ic_global_search_dark"></i>
+                </div>
+                <i class="icon-ic_close_web_mobile close_web position-absolute" *ngIf="searchCloseIcon" (click)="openSearchTextBox(false)"></i>
+                <div class="search-component position-absolute" *ngIf="isShowAppSearch">
+                    <app-search [autoResult]="searchResult" [searchTitle]="searchTitle" [searchValue]="searchValue" [songFilter]="songFilter"
+                        (searchKeywordValue)="searchKeywordValue($event)" (navigateToSearchPageEvent)="navigateToSearchPage($event)"
+                        [noSearchResult]="noSearchResult">
+                    </app-search>
+                </div>
+            </div>
+
+            <div class="mobSearchIcon" (click)="openSearchTextBox(true)">
+                <i class="icon-ic_global_search_dark"></i>
+            </div>
+
+            <div class="searchMobWrap w-100 position-absolute" id="searchMobWrap" *ngIf="isMobileViewForHeader">
+                <input class="search w-100 border-radius-5" type="search" maxlength="60" placeholder="Search music you love!" name="searchinput"
+                    id="searchinput" #inputSearchText (focus)="openSearchComponent($event.target.value)" (keydown.enter)="navigateToSearchDetails($event.target.value)"
+                    (blur)="closeSearchComponent()" autocomplete="off" (keyup)="searchBoxInputValue()" aria-label="Search">
+                <div class="mobInsideSearchBtn position-absolute">
+                    <i class="icon-ic_global_search_dark"></i>
+                </div>
+                <i class="icon-ic_close_web_mobile close_Mob position-absolute" *ngIf="searchCloseIcon" (click)="openSearchTextBox(false)"></i>
+                <div class="search-component" *ngIf="isShowAppSearch">
+                    <app-search [autoResult]="searchResult" [searchTitle]="searchTitle" [searchValue]="searchValue" [songFilter]="songFilter"
+                        (searchKeywordValue)="searchKeywordValue($event)" (navigateToSearchPageEvent)="navigateToSearchPage($event)"
+                        [noSearchResult]="noSearchResult">
+                    </app-search>
+                </div>
+            </div>
+            <div class="dark-mode-icon" (click) = "toggleTheme()">
+                <!-- <img src="../../../{{'themeIcon' | iconTheme: theme }}" (click) = "toggleTheme()" alt="" class="img-fluid" /> -->
+                <div class="dark-mode-switch" [ngClass] = "theme === 'dark' ? 'dark' : '' ">
+                    <div class="inner">
+                      <div class="bg"></div>
+                      <div class="circle"></div>
+                    </div>
+                    <div class="rays">
+                      <div class="ray"></div>
+                      <div class="ray"></div>
+                      <div class="ray"></div>
+                      <div class="ray"></div>
+                      <div class="ray"></div>
+                      <div class="ray"></div>
+                      <div class="ray"></div>
+                      <div class="ray"></div>
+                    </div>
+                  </div>
+            </div>
+            <div class="language-icon ml-4" (click)="languageModal(languagePopUp)" title="Change Language">
+                <img src="../../../{{'languageIcon' | iconTheme: theme }}" alt="" title="Choose Language">
+            </div>
+
+            <div *ngIf="!isLoggedIn" (click)="openModal()" class="signin ml-4">
+                Sign In
+            </div>
+
+            <div class="mobile-sign-in ml-4" *ngIf="!isLoggedIn" [autoClose]="true" placement="bottom-right" [ngbPopover]="userPopover"
+            popoverClass="profile-popover" container="body" title="My Profile">
+                <img src="../../../{{'profileIcon' | iconTheme: theme }}" title="Sign In" alt="Sign In">
+            </div>
+
+            <div class="userSection d-inline-block ml-3 ml-sm-4 ml-md-4" *ngIf="isLoggedIn" [autoClose]="true" placement="bottom-right" [ngbPopover]="userPopover"
+                popoverClass="profile-popover" container="body" title="My Profile">
+                <span class="userDetails rounded-circle float-left">
+                    <img appImgLazyLoad [src]="profileImage" alt="Profile" title="Profile">
+                </span>
+                <i class="icon-ic_global_down_chevron_dark"></i>
+            </div>
+        </div>
+
+    </div>
+</nav>
+
+<div class="hamburgerView position-fixed p-4" *ngIf="hamburgerToggle">
+    <i class="icon-ic_close_web_mobile closeBtn rounded-circle" (click)="hamburgerNavbar(false)"></i>
+    <ul class="hamburgerViewNav">
+        <li routerLink="/music" (click)="hamburgerNavbar(false)">
+            <a>Home</a>
+        </li>
+        <li routerLink="/music/my-music" (click)="hamburgerNavbar(false)">
+            <a>My Music</a>
+        </li>
+        <li  (click)="downloadApp('song_download_hamburger')">
+            <a>Download App</a>
+        </li>
+        <li *ngIf="!isLoggedIn" (click)="openModal(); hamburgerNavbar(false)">
+            <a>Sign In</a>
+        </li>
+        <li  *ngIf="isLoggedIn" (click)="signOut(); hamburgerNavbar(false)">
+            <a >Sign Out</a>
+        </li>
+    </ul>
+
+    <div class="circleIcons d-inline-block position-absolute">
+        <a (click)="sendPageEvents('Follow_Facebook','SIDE_NAV','click')" class="rounded-circle d-flex justify-content-center align-items-center"
+            href="https://www.facebook.com/WynkMusic" target="_blank">
+            <i class="icon-ic-global-facebook-dark"></i>
+        </a>
+        <a (click)="sendPageEvents('Follow_Twitter','SIDE_NAV','click')" class="rounded-circle d-flex justify-content-center align-items-center"
+            href="https://twitter.com/WynkMusic" target="_blank">
+            <i class="icon-ic_global_twitter_dark"></i>
+        </a>
+        <a (click)="sendPageEvents('Follow_Instagram','SIDE_NAV','click')" class="rounded-circle d-flex justify-content-center align-items-center"
+            href="https://www.instagram.com/wynkmusic" target="_blank">
+            <i class="icon-ic_global_insta_dark"></i>
+        </a>
+    </div>
+
+</div>
+
+<div class="blk-trans" (click)="closeBlackScreen()" [ngClass]="{'blk-trans-show':UserService.openside}"></div>
+
+<ng-template #languagePopUp>
+    <app-language (closeModalInput)="closeLangugaePopUp()" (languageChange)="languageChangeEvent($event)" [popupReference]="languagePopUp"></app-language>
+</ng-template>
+
+<ng-template #soundQualityPopup>
+    <sound-quality [isHdAllowed]="isLoggedIn" (closeModalInput)="closeSoundQualityPopUp()"></sound-quality>
+</ng-template>
+
+<ng-template #userPopover>
+    <app-user-detail-popover [userCookieData]="loggedInUserData" (signOut)="signOut()" [isUserLoggedIn]="isLoggedIn" (signIn)="openModal()" (languagePopUpClick)="languageModal(languagePopUp)" (soundQualityClick)="soundQualityModal(soundQualityPopup)"></app-user-detail-popover>
+</ng-template>

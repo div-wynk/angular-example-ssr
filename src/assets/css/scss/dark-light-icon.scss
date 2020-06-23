@@ -1,0 +1,120 @@
+$dt-title-color-white: #f7f5f5;
+$dt-bg-black-primary: #0c0f12;
+$white:#fff;
+
+.dark-mode-switch {
+  margin-left: 25px;
+  margin-right: 8px;
+  margin-top: -4px;
+  @media(max-width: 575px){
+    margin-right: 15px;
+    margin-top: -8px;
+  }
+  @media(max-width: 320px){
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+    &.dark{
+      margin-top: 0px;
+      margin-right: 4px;
+      width: 18px;
+      height: 18px;
+      padding: 5px;
+      .inner {
+        width: 8px;
+        height: 8px;
+      }
+      .bg {
+        width: 8px;
+        height: 8px;
+      }
+      
+    }
+      position: relative;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: transparent;
+      cursor: pointer;
+      
+      .inner {
+        width: 16px;
+        height: 16px;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .circle {
+        margin-left: 4px;
+        margin-top: -16px;
+        width: 12px;
+        height: 12px;
+        background-color:$white;
+        border: 2px solid $white;
+        border-radius: 10px;
+        transition: all 0s;
+      }
+      .bg {
+        width: 16px;
+        height: 16px;
+        background-color: $dt-bg-black-primary;
+        border: 1px solid $white;
+        border-radius: 10px;
+        transition: all 0s;
+      }
+      
+      
+      
+      .rays {
+        position: absolute;
+        left: 8px;
+        top: 9px;
+        .ray {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 1px;
+          height: 4px;
+          background-color: $dt-title-color-white;;
+          transform-origin: 1px 0;
+          opacity: 0;
+          
+          @for $i from 1 through 8 {
+            &:nth-child(#{$i}) {
+              transform: rotate(-45deg * $i - 135deg) translateY(2px);
+              transition: all 0.2s;
+            }
+          }
+        }
+      }
+      
+      &.dark {
+        &:hover {
+          .rays .ray {
+            height: 5px;
+           @for $i from 1 through 8 {
+              &:nth-child(#{$i}) {
+                transform: rotate(-45deg * $i - 135deg) translateY(3px);
+              }
+            } 
+          }
+        }
+        
+        .circle {
+          margin-left: 0;
+          margin-top: -8px;
+          background-color: $dt-title-color-white;;
+          border-color: $dt-title-color-white;;
+        }
+        
+        .rays .ray {
+            opacity: 1;
+           @for $i from 1 through 8 {
+              &:nth-child(#{$i}) {
+                transform: rotate(-45deg * $i - 135deg) translateY(5px);
+                transition: all (0.2s + $i * 0.2s);
+              }
+           } 
+        }
+      }
+    }

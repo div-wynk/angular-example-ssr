@@ -1,0 +1,494 @@
+/*dt darktheme*/
+.dark{
+  $cherry-red: #ed1c24;
+  $primary-red: #cc0016;
+  $dt-title-color-white: #f7f5f5;
+  $dt-color-gray: #818c94;
+  $dt-color-light-gray: #b7c0c4;
+  $green: #00d984;
+  $dt-bg-black-primary: #0c0f12;
+  $dt-bg-black-secondary: #21252d;
+  $dt-bg-black-light: #1f272b;
+  $rail-prev-shadow:linear-gradient(to left, rgba(4, 4, 4, 0), #000000 52px);
+  $rail-next-shadow:linear-gradient(to right, rgba(238, 238, 238, 0), #000000 75px);
+  
+  $shimer-bg1:$dt-bg-black-secondary;
+  $shimer-bg2:$dt-bg-black-primary;
+  
+  $box-shadow-color: rgba(207, 204, 204, 0.14);
+  $dt-border-color:#3d464d;
+  
+  background-color: $dt-bg-black-primary;
+  color: $dt-color-gray;
+  
+  @mixin box-shadow($top, $left, $blur, $color) {
+    box-shadow: $top $left $blur 0 $color;
+    -webkit-box-shadow: $top $left $blur 0 $color;
+    -moz-box-shadow: $top $left $blur 0 $color;
+  }
+  .bg-black{
+    background-color: $dt-bg-black-primary;
+  }
+  .bg-black2 {
+    background-color: $dt-bg-black-secondary;
+  }
+  .bg-black3 {
+    background-color: $dt-bg-black-light;
+  }
+  .bg-cherry-red {
+    background-color: $cherry-red;
+  }
+  .bg-red1 {
+    background-color: $primary-red;
+  }
+  .text-light {
+    color: $dt-title-color-white;
+  }
+  .text-gray {
+    color: $dt-color-gray;
+  }
+  .text-gray2 {
+    color: $dt-color-light-gray;
+  }
+  
+  .rectangleShadow {
+    background: $dt-bg-black-secondary;
+  }
+  .navbar-nav {
+    li {
+      a {
+        @extend .text-light;
+        &:hover,&:focus{
+          @extend .text-gray2;
+        }
+      }
+    }
+  }
+  .signin {
+    @extend .text-light;
+    &:hover,&:focus{
+      @extend .text-gray2;
+    }
+  }
+  .dropdownMenu,
+  .bg-light{
+    background-color: $dt-bg-black-secondary;
+  }
+  .searchWrapper {
+    color: $dt-title-color-white;
+  }
+  .search{
+    background: $dt-bg-black-primary;
+    color: $dt-title-color-white;
+  }
+  ul.breadcrumb {
+    background: $dt-bg-black-primary;
+   
+  }
+  h1,
+  h2,
+  h3,
+  a:hover,
+  .name,
+  button.white:hover,
+  .circleIcons a,
+  .dark-text-color,
+  .LyricContent p,
+  .lyrics p,
+  .railHeading,
+  .page-description-right p,
+  .sug-header{
+    @extend .text-light;
+  }
+  .bold-text-color,
+  .light-text-color,
+  a:not([href]),
+  .card-body{
+    @extend .text-gray;
+  }
+  button.white {
+    @extend .text-gray2;
+    background-color: $dt-bg-black-primary;
+    border-color: $dt-color-gray;
+    &:hover{
+      @extend .bg-black2;
+    }
+  }
+  .icon-ic_global_overflow_dark,
+  .icon-ic_global_download_dark,
+  .icon-ic_share_dark,
+  .text-black-50,
+  ::placeholder,
+  ul.breadcrumb,
+  ul.breadcrumb a,
+  p.subInfo, 
+  .status-otp,
+  input:disabled,
+  .registration-wrap p,
+  .close i,
+  .watch-movie-btn {
+    @extend .text-gray2;
+  }
+  .showMoreBtn a {
+    @extend .text-gray2;
+    &:hover,
+    &:focus {
+      @extend .bg-black2;
+    }
+  }
+  .LyricContent {
+    @extend .bg-black2;
+  }
+  .border {
+    border-color: $dt-border-color;
+  }
+  .player {
+    @extend .bg-black2;
+    @extend .text-light;
+    i{
+        @extend .text-gray2;
+    }
+  }
+  .volume::after{
+      @extend .bg-black2;
+  }
+  .loader{
+      @extend .bg-black2;
+      border-color: $dt-bg-black-secondary;
+  }
+  ul.dropdownMenu li button{
+      @extend .bg-black2;
+      @extend .text-light;
+      &:hover {
+        background-color:$dt-bg-black-primary;
+        }
+        span{
+            @extend .text-gray2;
+        }
+  }
+  .dropdownMenu li{
+    &:hover,&:focus{
+      background-color:$dt-bg-black-primary;
+    }
+  }
+  .sug-searchlist-wrap,
+  .popover-body,
+  .popover.profile-popover,
+  .detail-prefix,
+  .modal-content,
+  .phoneno{
+    @extend .bg-black2;
+  } 
+  .drop-overflow li{
+    a{
+      @extend .text-light;
+    }
+    &:hover,&:focus{
+      background-color:$dt-bg-black-primary;
+      @extend .text-gray2;
+    }
+  }
+  .drop-overflow ul.socialIcons li{
+    &:hover,&:focus{
+      background: transparent;
+      div.icon-circle i{
+        background-color:$dt-bg-black-primary;
+      }
+    }
+  }
+  .sug-searchlist ul li{
+    border-color: $dt-bg-black-secondary;
+    a {
+      @extend .text-gray2;
+      &:hover,&:focus{
+        background-color:$dt-bg-black-primary;
+      }
+    }
+  } 
+  .queueInnerSection {
+    background-color: rgba(0, 0, 0, 0.85);
+  }
+  .next{
+    background-image: linear-gradient(to right, rgba(4, 4, 4, 0), $dt-bg-black-primary 75px);
+    background-image: -webkit-linear-gradient(to right, rgba(4, 4, 4, 0), $dt-bg-black-primary 75px);
+    background-image: -moz-linear-gradient(to right, rgba(4, 4, 4, 0), $dt-bg-black-primary 75px);
+  }
+  .prev{
+    background-image: linear-gradient(to left, rgba(4, 4, 4, 0), $dt-bg-black-primary 52px);
+    background-image: -webkit-linear-gradient(to left, rgba(4, 4, 4, 0), $dt-bg-black-primary 52px);
+    background-image: -moz-linear-gradient(to left, rgba(4, 4, 4, 0), $dt-bg-black-primary 52px);
+  }
+  
+  
+  /* LOGIN modal popup */
+  input.border{
+              background-color:$dt-bg-black-primary;
+              border-color: $dt-bg-black-secondary;
+            }
+  .editPlaylistName{
+    background-color:$dt-bg-black-primary;
+    @extend .text-light;
+    border-bottom: 2px solid $dt-bg-black-secondary;
+    &:focus{  
+      border-bottom: 2px solid $dt-bg-black-secondary;
+      border-bottom-color: $dt-bg-black-secondary;
+    }
+  }
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover, 
+  input:-webkit-autofill:focus{
+    background-color: $dt-bg-black-primary;
+  }
+  button.transparentButton,
+  .circleIcons a {
+    background-color: $dt-bg-black-primary;
+    &:hover{
+      background-color:$dt-bg-black-secondary;
+    }
+  }
+  
+  /* footer */
+  .footerLastSec p,
+  .fNames a {
+      @extend .text-gray;
+  }
+  a.fLinks,
+  .fHeading,
+  .fNames a:hover,
+  .phoneno,
+  .close i:hover,
+  .close i:focus,
+  a:not([href]):hover,
+  .modal-title{
+      @extend .text-light;
+  }
+  .circleIcons a{
+      border-color: $dt-color-gray;
+      &:hover{
+        @extend .bg-black2;
+      }
+  }
+  .socialIcons li i:hover {
+    border-color: $dt-bg-black-primary;
+  }
+  ul.breadcrumb li a:hover,
+  ul.breadcrumb li span,
+  .card-header {
+   @extend  .text-light;
+  }
+  
+  .non-login-profile.drop_profile li:first-child,
+  .drop_profile li,
+  .drop_profile li:first-child,
+  .down-pop-info p,
+  .detail-prefix{
+    @extend .text-gray2;
+  }
+ 
+  .hamburgerView{
+    @extend .bg-black2;
+  }
+  
+  .splay{
+    background-color: $dt-title-color-white;
+  }
+  .playerControls {
+    .splay{
+      background: transparent;
+    }
+  }
+  .hamburgerViewNav a:not([href]){
+    @extend .text-light;
+  }
+  .sshuffle:hover i,
+  .srepeat:hover i,
+  .showQueue:hover i,
+  .sprevious:hover i,
+  .snext:hover i,
+  .drop_profile li.text-light a{
+    @extend .text-light;
+  }
+  .card-header button{
+    @extend .text-gray2;
+    &:hover{
+      @extend .text-light;
+    }
+  }
+  /*banner*/
+  .item{
+    @extend .bg-black2;
+    img{
+      @extend .bg-black2;
+    }
+  } 
+  /*shimmering component css*/
+  .sv-grid-img,
+  .grayButton,
+  .slide,
+  .defaultBg,
+  .castImg,
+  .sv-grid-img,
+  .grayLine ,
+  .img-cont{
+   @extend .bg-black2;
+  }
+  .grayButton:first-child{
+    background-color: $dt-bg-black-primary;
+  }
+  .albumList li{
+    /* box-shadow: 0px 2px 4px 0px rgba(72, 70, 70, 0.22); */
+    border:1px solid transparent;
+    border-color: transparent;
+    &:hover {
+      // @include box-shadow(0, 4px, 10px, $box-shadow-color);
+      border-color: $dt-border-color; 
+      @media(max-width: 445px){
+        border-color: transparent;
+      }
+    }
+
+  }
+  
+  /* language select component */
+  .langText {
+    &.selected {
+     .langTextInside{
+       &:hover{
+        background-color: $dt-bg-black-primary;
+        @extend .text-light;
+       }
+       background-color: $dt-bg-black-primary;
+       @extend .text-light;
+      }
+    }
+    .langTextInside {
+      @extend .bg-black2;
+      @extend .text-gray2;
+      &:hover {
+        background-color: $dt-bg-black-primary;
+      }
+    }
+  }
+  
+  
+  .language-toggle-btn {
+    .lang-dropdown-menu {
+      @extend .bg-black2;
+      li {
+        a {
+          @extend .bg-black2;
+          @extend .text-gray2;
+          span {
+            @extend .text-gray2;
+          }
+          &:hover {
+            background-color: $dt-bg-black-primary;
+          }
+        }
+      }
+      .selected {
+        a {
+          background-color: $dt-bg-black-primary;
+          span {
+            @extend .text-light;
+          }
+          i {
+            @extend .text-light;
+          }
+          &:hover {
+            background-color: $dt-bg-black-primary;
+          }
+        }
+      }
+    }
+  }
+  .appStore img {
+    background-color: $dt-bg-black-primary;
+  }
+  ul li button.selected{
+    background-color: $dt-bg-black-primary;
+  }
+  .border-top,.border-bottom{
+    border-color: $dt-border-color;
+  }
+  .lyricsBtn {
+    @extend .text-gray2;
+    &:hover{
+      border-color:$dt-border-color;
+     @extend .text-light
+    }
+  }
+  .createPlaylist button{
+    &.border.disabled{
+      @extend .text-gray2;
+      @extend .bg-black2;
+    }
+  } 
+  .toastImg img{
+    background-color: $dt-bg-black-primary;
+  }
+  .toast{
+    @extend .bg-black2;
+  }
+  .checkIcon,
+  .checkAdd:hover{
+    background-color: $dt-bg-black-primary;
+   @extend .text-gray2;
+  }
+  .toastBodyText {
+   
+    span{
+      @extend .text-gray2;
+    }
+  }
+  .dropdownMenu.soundQuality{
+    li{
+      &:hover,&:focus{background: transparent;}
+      button{
+        &:hover,&:focus,&.selected{ 
+         background: $dt-bg-black-primary;
+        }
+      }
+      &:first-child{@extend .text-light}
+    }
+  }
+  .card-header .btn-link {
+    background-image: url("../src/assets/images/dt-chevron_right_up.svg");
+  }
+  
+  .card-header .btn-link.collapsed {
+    background-image: url("../src/assets/images/dt-chevron_right_down.svg");
+  }
+  .helloTune-icon{
+    fill:#b7c0c4;
+  }
+  ::selection,
+  ::-moz-selection,
+  ::-moz-focus-inner {
+    background: $dt-bg-black-primary;
+  }
+  @media (min-width: 319px) and (max-width: 575px) {
+  .myPlaylist input{
+    color: $dt-title-color-white;
+    background-color:$dt-bg-black-primary;
+    border: 0;
+    border-bottom: 1px solid $dt-bg-black-secondary;
+  }
+}
+  .shimmer {
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      color-stop(25%, $shimer-bg1),
+      color-stop(37%,$shimer-bg2),
+      color-stop(63%,$shimer-bg1)
+    );
+    background: linear-gradient(90deg,$shimer-bg1 25%, $shimer-bg2 37%, $shimer-bg1 63%);
+    background-size: 400% 100%;
+    -webkit-animation: shimmer-loading 1.8s ease-in-out infinite;
+    animation: shimmer-loading 1.8s ease-in-out infinite;
+  }
+  }
+  
+ 

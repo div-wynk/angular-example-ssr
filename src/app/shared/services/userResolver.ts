@@ -7,7 +7,7 @@ import { environment } from "../../../environments/environment";
 import { AppUtil } from "../../utils/AppUtil";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { LocalStorageWrapperService } from "./localstorage-wrapper.service";
-// import { TfaService } from "./tfa.service";
+ import { TfaService } from "./tfa.service";
 
 @Injectable({
   providedIn:"root"
@@ -19,7 +19,7 @@ export class UserResolver implements Resolve<any>{
     private commonService: CommonService,
     private http: HttpClient,
     private persistDataService: PersistDataService,
-    // private tfaService: TfaService,
+     private tfaService: TfaService,
   ) {
     let imgNo = 0;
     this.commonService.goOnBuddy$.subscribe((res) => {
@@ -42,7 +42,7 @@ export class UserResolver implements Resolve<any>{
           this.commonService.setCookieForNonLoggedInUser(user);
           this.commonService.saveRequiredParams(res.dt, res.kt, res.server_timestamp);
           this.persistDataService.setFreshUser();
-          // this.tfaService.nextTek();
+           this.tfaService.nextTek();
           return false;
         }).catch(err => {
           return false;
@@ -56,12 +56,12 @@ export class UserResolver implements Resolve<any>{
       const loggedInUserCookie = this.commonService.getCookieForLoggedInUser();
       if (loggedInUserCookie) {
         this.persistDataService.setUserLoggedIn(true);
-        // this.tfaService.nextTek();
+         this.tfaService.nextTek();
         return true;
       } else {
         this.commonService.saveRequiredParams(userCookie.dt, userCookie.kt, Date.now());
         this.persistDataService.setCookieForNonLoggedInUser(userCookie);
-        // this.tfaService.nextTek();
+         this.tfaService.nextTek();
         return false;
       }
     }

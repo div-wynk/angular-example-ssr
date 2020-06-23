@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="155.142" height="154.84" viewBox="0 0 155.142 154.84">
+    <defs>
+        <style>
+            .cls-1,.cls-10,.cls-6,.cls-7,.cls-8,.cls-9{fill:none}.cls-2,.cls-3{fill:#e8e8e8}.cls-2,.cls-6{opacity:.2}.cls-3{opacity:.6}.cls-4{fill:#93979a}.cls-5{clip-path:url(#clip-path)}.cls-7{opacity:.3}.cls-8{opacity:.4}.cls-9{opacity:.5}.cls-10{opacity:.8}
+        </style>
+        <clipPath id="clip-path">
+            <path d="M0 0h36.488v39.604H0z" class="cls-1"/>
+        </clipPath>
+    </defs>
+    <g id="No_Downloaded_empty_state_" data-name="No Downloaded(empty state)" transform="translate(-649.446 -729.158)">
+        <g id="Group_689" data-name="Group 689" transform="translate(0 20)">
+            <path id="Oval" d="M77.6 153.8c40.177 3.262 79.1-24.225 77.5-75.974S118.693-8.576 77.6 1.856-2.266 38.819.1 77.83s37.322 72.712 77.5 75.97z" class="cls-2" transform="translate(649.445 709.158)"/>
+            <path id="Oval-2" d="M59.337 117.609C90.06 120.1 119.819 99.084 118.6 59.514S90.762-6.558 59.338 1.419-1.733 29.683.079 59.514s28.536 55.6 59.258 58.095z" class="cls-3" data-name="Oval" transform="rotate(-71 903.48 -42.422)"/>
+        </g>
+        <g id="Group_692" data-name="Group 692" transform="translate(41.061 6)">
+            <path id="Path_363" d="M118.718 25.86A40.711 40.711 0 0 0 83.057 1.013 2.3 2.3 0 0 0 81.147 0H2.3A2.306 2.306 0 0 0 0 2.3v78.845a2.3 2.3 0 0 0 2.3 2.3h78.847a2.294 2.294 0 0 0 1.91-1.015 40.718 40.718 0 0 0 38.866-40.707 40.5 40.5 0 0 0-3.205-15.863zM78.847 78.843H4.6V4.6h74.249v27.183a10.208 10.208 0 0 0 0 19.884v27.176zm-3.289-37.117a5.613 5.613 0 0 1 5.6-5.605 2.305 2.305 0 0 0 2.3-2.306V31a10.966 10.966 0 0 1 0 21.452v-2.815a2.3 2.3 0 0 0-2.3-2.306 5.616 5.616 0 0 1-5.6-5.605zm38.919 14.068A36.1 36.1 0 0 1 83.446 77.8V57.125a15.572 15.572 0 0 0 0-30.808V5.645a36.173 36.173 0 0 1 31.031 50.149z" class="cls-4" data-name="Path 363" transform="translate(624.958 758.521)"/>
+            <g id="ic_download_dark" class="cls-5" transform="translate(645.802 780.872)">
+                <g id="Icon_BG" class="cls-5" data-name="Icon BG">
+                    <path id="_24x24" d="M0 0h36.488v39.6H0z" class="cls-6" data-name="24x24"/>
+                    <path id="_20x20" d="M0 0h32.349v32.349H0z" class="cls-6" data-name="20x20" transform="translate(1.754 1.754)"/>
+                    <path id="_18x18" d="M0 0h30.594v30.594H0z" class="cls-7" data-name="18x18" transform="translate(2.632 2.632)"/>
+                    <path id="_16x16" d="M0 0h28.84v28.84H0z" class="cls-8" data-name="16x16" transform="translate(3.509 3.509)"/>
+                    <path id="_12x12" d="M0 0h10.527v10.527H0z" class="cls-9" data-name="12x12" transform="translate(12.981 14.538)"/>
+                    <path id="_8x8" d="M0 0h7.018v7.018H0z" class="cls-10" data-name="8x8" transform="translate(14.735 16.293)"/>
+                </g>
+                <path id="Path_55" d="M28.756 18.747h-7.918V3h-3.96v15.747H8.959l9.9 9.842zM5 32.526v3.937h27.716v-3.937z" class="cls-4" data-name="Path 55" transform="translate(-.614 -.368)"/>
+            </g>
+        </g>
+    </g>
+</svg>

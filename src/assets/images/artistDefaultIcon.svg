@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="328" height="328" viewBox="0 0 328 328">
+    <defs>
+        <style>
+            .cls-1{fill:#e8e8e8}.cls-2{fill:#c4c6c8}
+        </style>
+    </defs>
+    <g id="Artist" transform="translate(116 110)">
+        <rect id="Rectangle_284" width="328" height="328" class="cls-1" data-name="Rectangle 284" rx="164" transform="translate(-116 -110)"/>
+        <path id="Union_74" d="M.021 108.489v-5.979H0v-3.494a47.678 47.678 0 1 1 95.356 0v3.495h-.038v6.127zm88.359-6.651v-2.822a40.7 40.7 0 1 0-81.4 0v2.579zM22.095 24.464a24.421 24.421 0 1 1 24.421 24.462 24.5 24.5 0 0 1-24.421-24.462zm6.978 0A17.443 17.443 0 1 0 46.516 6.99a17.4 17.4 0 0 0-17.444 17.474z" class="cls-2" data-name="Union 74"/>
+    </g>
+</svg>

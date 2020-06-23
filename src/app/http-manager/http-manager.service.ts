@@ -1,3 +1,4 @@
+import { LocalStorageWrapperService } from './../shared/services/localstorage-wrapper.service';
 /**
  * Created by Harish Chandra.
  */
@@ -8,7 +9,7 @@ import { tap } from "rxjs/operators";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { CommonService } from "./../shared/services/common.service";
 import { AppUtil } from "../utils/AppUtil";
-// import { TfaService } from "../shared/services/tfa.service";
+ import { TfaService } from "../shared/services/tfa.service";
 
 @Injectable({ providedIn: "root" })
 export class HttpRequestManager {
@@ -16,8 +17,9 @@ export class HttpRequestManager {
   constructor(
     private http: HttpClient,
     private commonService: CommonService,
-    private appUtil: AppUtil
-    // private tfaService: TfaService,
+    private appUtil: AppUtil,
+    private _localStorageWrapperService: LocalStorageWrapperService,
+     private tfaService: TfaService,
   ) {
   }
 
@@ -31,10 +33,13 @@ export class HttpRequestManager {
             header['x-msisdn'] = msisdn;
         }
         header['Content-Type'] = "application/json";
-        // if(isPlayback) {
-        //   header['x-bsy-t'] = this.tfaService.tek ? this.tfaService.tek : '';
-        //   header['x-bsy-uuid'] = this.tfaService.did ? this.tfaService.did : '' ;
-        // }
+        if(isPlayback) {
+          if(this._localStorageWrapperService.isPlatformServer()){
+            return;
+          }
+          header['x-bsy-t'] = this.tfaService.tek ? this.tfaService.tek : '';
+          header['x-bsy-uuid'] = this.tfaService.did ? this.tfaService.did : '' ;
+        }
         return header;
   }
 

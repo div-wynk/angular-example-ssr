@@ -1,0 +1,57 @@
+[
+    {
+        "title":"Do I need to download and register on Wynk app for getting free hello tune?",
+        "description":"Yes. You need to download Wynk app and register with your Airtel mobile no. You can download Wynk Music from this link."
+    },
+    {
+        "title":"What will happen to my already active Hello Tune? I have just paid / billing cycle has just started?",
+        "description":"On selecting a new Hello Tune on Wynk app, your previous selection of songs will be disabled and new Hello Tune subscription will be activated. Special Caller tunes however will not get affected."
+    },
+    {
+        "title":"Are there any monthly charges or Song change charges?",
+        "description":"Hello Tune on Wynk app is absolutely free. Once you setup Hello Tune on Wynk, it will be activated for next 30 days. You can change the songs as many times as you want at no charge. <br> To extend validity of the Hello Tune, all you need to do is renew the same song or set up a new tune to update the free validity to next 30 days."
+    },
+    {
+        "title":"Can I create my profile - album / special tunes/ profile through Wynk app?",
+        "description":"Currently these features are not available on Wynk app. You may continue using these features from Hello Tune app and by dialing 578785. You will need to pay the applicable charges for them."
+    },
+    {
+        "title":"I do not have Airtel mobile connection but am using Airtel broadband. Can I still set my hello tune from Wynk app?",
+        "description":"Currently Hello Tunes can be setup only on your Airtel mobile number."
+    },
+    {
+        "title":"How to check the status of Hello Tune?",
+        "description":"<ul class='list'><li>Open the Wynk app</li><li>Go to the Hello Tune button</li><li>Status of the Hello Tune along with the validity will be mentioned on the screen</li></ul>"
+    },
+    {
+        "title":"Will it get auto renewed?",
+        "description":"No. The validity will not get auto renewed. However, you can extend the free validity through Wynk app."
+    },
+    {
+        "title":"Why am I not getting Hello tune of my choice?",
+        "description":"You can reach out to us at contact@Wynk.in and let us know your request."
+    },
+    {
+        "title":"How to remove Pre tune / message playing before my song?",
+        "description":"To remove Pre tune, <ul class='list'><li>Go to Wynk app</li><li>Click on Hello Tune Management screen</li><li>Click on the ellipsis in the top card.</li><li>You will get an option to “Stop Pre tune Message”</li><li>Click on it to stop the Pre tune message</li></ul>"
+    },
+    {
+        "title":"How to deactivate / remove Hello Tune?",
+        "description":"<ul class='list'><li>Go to Hello Tune Management screen from Hellotune icon on the Search Bar</li><li>Click on the 3 dots in the top card</li><li>You will get an option to “Stop Hello Tune”</li><li>Click on it to stop the Hello Tune service on your mobile number</li></ul>"
+    },
+    {
+        "title":"Is there any limit for number of times I can set/ change my hello tune?",
+        "description":"No. There is no limit to changing the tune. You can do so as many times as you want absolutely free of cost."
+    },
+    {
+        "title":"How can I set my HT for auto renewal?",
+        "description":"Auto renewal feature is not available on free Hello Tune activated via Wynk app."
+    },
+    {
+        "title":"Can I set Hello tune in offline mode?",
+        "description":"No. Setting up Hello Tune will require you to have an active internet connection"
+    },
+    {
+        "note":"<h4>Notes: Users who have activated DND or their numbers fall in the category of COCP, Ad RBT and Blacklist, cannot set Hello Tune via Wynk Music app.</h4>"
+    }
+]

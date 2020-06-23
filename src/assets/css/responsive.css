@@ -1,0 +1,58 @@
+@media (max-width:1200px) {
+    .sideSpacer {
+        width: 100%;
+    }
+    .player.fixed-bottom {
+        width: 98% !important;
+    }
+    .appflyer-show1 {
+        display: none !important;
+    }
+}
+
+@media (max-width:990px) {
+    .login-modal-dialog .modal-dialog {
+        max-width: 700px;
+      }
+}
+
+@media (max-width:768px) {
+    .sideSpacer {
+        width: 100%;
+    }
+    .cast {
+        margin-right: -15px;
+    }
+    .toast-container {
+        width: 98%;
+        right: 1%;
+        left: 1%;
+    }
+    .toast-container .toast {
+        width: 100%;
+        max-width: 100%;
+    }
+    .toast-container {
+        bottom: 0px;
+    }
+    .showPlayeratBottom .toast-container {
+        bottom: 45px;
+    }
+    a.seeAllBtn {
+        min-width: 50px;
+    }
+    a.seeAllBtn:hover {
+        background-color:transparent;
+        color: #ed1c24 !important;
+    }
+    .mobileImg {
+        padding-top: 100%;
+        width: 100%;
+    }
+}
+
+@media (max-width:575px) {
+    .modal-content {
+        border-radius: 10px !important;
+    }
+}

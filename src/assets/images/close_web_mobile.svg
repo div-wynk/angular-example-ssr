@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20.001" viewBox="0 0 20 20.001">
+    <defs>
+        <style>
+            .cls-1{fill:#282f36}
+        </style>
+    </defs>
+    <g id="ic_close_web_mobile" transform="translate(4 4)">
+        <path id="Combined_Shape" d="M6.364 13.435V7.779H.707a.707.707 0 0 1 0-1.415h5.657V.707a.707.707 0 0 1 1.415 0v5.657h5.657a.707.707 0 0 1 0 1.415H7.779v5.657a.707.707 0 0 1-1.415 0z" class="cls-1" data-name="Combined Shape" transform="rotate(45 7.828 5.243)"/>
+    </g>
+</svg>

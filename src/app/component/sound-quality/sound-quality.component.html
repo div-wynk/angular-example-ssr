@@ -1,0 +1,12 @@
+<button type="button" class="close position-absolute" aria-label="Close" (click)="closeModal()">
+    <i class="icon-ic_close_web_mobile"></i>
+</button>
+<ul class="dropdownMenu soundQuality border-radius-10">
+    <li>Sound Quality</li>
+    <li (click)="openSignInPopup()" *ngIf="!isHdAllowed" class="login-with-HD"><button title="login for HD" class="border">Login for free HD audio<span>320/256 kbps</span></button></li>
+    <li (click)="setQuality('HD')" *ngIf="isHdAllowed"><button [ngClass]="selectedQuality === 'HD' ? 'selected' : ''" title="320/256 kbps">HD <span>320/256 kbps</span> <i *ngIf="selectedQuality === 'HD'" class="icon-ic_global_check float-right"></i></button></li>
+    <li (click)="setQuality('High')"><button [ngClass]="selectedQuality === 'High' ? 'selected' : ''" title="128 kbps">High <span>128 kbps</span> <i *ngIf="selectedQuality === 'High'" class="icon-ic_global_check float-right"></i></button></li>
+    <li (click)="setQuality('Med')"><button [ngClass]="selectedQuality === 'Med' ? 'selected' : ''" title="64 kbps">Med <span>64 kbps</span> <i *ngIf="selectedQuality === 'Med'" class="icon-ic_global_check float-right"></i></button></li>
+    <!--li (click)="setQuality('Low')"><button id="Low" title="32 kbps">Low <span>32 kbps</span> <i *ngIf="selectedQuality === 'Low'" class="icon-ic_global_check float-right"></i></button></li-->
+    <li (click)="setQuality('Auto')"><button [ngClass]="selectedQuality === 'Auto' ? 'selected' : ''" title="auto">Auto <i *ngIf="selectedQuality === 'Auto'" class="icon-ic_global_check float-right"></i></button></li>
+</ul>

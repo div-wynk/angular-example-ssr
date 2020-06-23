@@ -18,7 +18,7 @@ import { LoggerService } from "./logger.service";
 import { ErrorConstants } from "../../constant/error_constants";
 import { environment } from './../../../environments/environment';
 import { Subject, BehaviorSubject } from "rxjs";
-// import { TfaService } from "./tfa.service";
+ import { TfaService } from "./tfa.service";
 declare var buffer: any;
 
 @Injectable({ providedIn: "root" })
@@ -71,8 +71,8 @@ export class CommonService {
     private titlecasePipe: TitleCasePipe,
     private router: Router,
     private _localStorageWrapperService: LocalStorageWrapperService,
-    private loggerService: LoggerService
-    // private tfaService: TfaService,
+    private loggerService: LoggerService,
+     private tfaService: TfaService,
   ) {
 
     this.browserType = this.detectBrowser();
@@ -931,6 +931,9 @@ export class CommonService {
   }
 
   saveRequiredParams(did, tkey, st){
-    // this.tfaService.setRequiredParams(did, tkey, st);
+    if(this._localStorageWrapperService.isPlatformServer()){
+      return;
+    }
+     this.tfaService.setRequiredParams(did, tkey, st);
   }
 }

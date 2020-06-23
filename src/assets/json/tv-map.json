@@ -1,0 +1,627 @@
+{
+  "utm_album": "utm_source=album&utm_medium=wynk",
+  "utm_song": "utm_source=song&utm_medium=wynk",
+  "srch_erosintl_eros000269": {
+    "wynk_id": "srch_erosintl_eros000269",
+    "wynk_name": "Manmarziyaan",
+    "xstream_name": "Manmarziyaan",
+    "xstream_id": "EROSNOW_MOVIE_6909323",
+    "xstream_category": "Movie"
+  },
+  "srch_zeemusic_ZMC01855": {
+    "xstream_name": "Blank",
+    "xstream_id": "ZEE5_MOVIE_0-0-64410",
+    "wynk_id": "srch_zeemusic_ZMC01855",
+    "xstream_category": "Movie",
+    "wynk_name": "Blank"
+  },
+  "srch_sonymusic_886447521601": {
+    "xstream_name": "The Accidental PM",
+    "xstream_id": "ZEE5_MOVIE_0-0-39320",
+    "wynk_id": "srch_sonymusic_886447521601",
+    "xstream_category": "Movie",
+    "wynk_name": "The Accidental PM"
+  },
+  "srch_saregama_8907210228434": {
+    "xstream_name": "Babumoshai Bandookbaaz",
+    "xstream_id": "ZEE5_MOVIE_0-0-13567",
+    "wynk_id": "srch_saregama_8907210228434",
+    "xstream_category": "Movie",
+    "wynk_name": "Babumoshai Bandookbaaz"
+  },
+  "srch_hungama_44642283": {
+    "xstream_name": "Why Cheat India",
+    "xstream_id": "ZEE5_MOVIE_0-0-47046",
+    "wynk_id": "srch_hungama_44642283",
+    "xstream_category": "Movie",
+    "wynk_name": "Why Cheat India"
+  },
+  "srch_zeemusic_ZMC01159": {
+    "xstream_name": "Paltan",
+    "xstream_id": "ZEE5_MOVIE_0-0-7361",
+    "wynk_id": "srch_zeemusic_ZMC01159",
+    "xstream_category": "Movie",
+    "wynk_name": "Paltan"
+  },
+  "srch_hungama_344439": {
+    "xstream_name": "Wanted",
+    "xstream_id": "ZEE5_MOVIE_0-0-2463",
+    "wynk_id": "srch_hungama_344439",
+    "xstream_category": "Movie",
+    "wynk_name": "Wanted"
+  },
+  "srch_hungama_1762901": {
+    "xstream_name": "Commando",
+    "xstream_id": "ZEE5_MOVIE_0-0-2480",
+    "wynk_id": "srch_hungama_1762901",
+    "xstream_category": "Movie",
+    "wynk_name": "Commando"
+  },
+  "srch_hungama_40112009": {
+    "xstream_name": "Fryday",
+    "xstream_id": "ZEE5_MOVIE_0-0-8224",
+    "wynk_id": "srch_hungama_40112009",
+    "xstream_category": "Movie",
+    "wynk_name": "Fryday"
+  },
+  "srch_zeemusic_ZMC00250": {
+    "xstream_name": "Gadar: Ek Prem Katha",
+    "xstream_id": "ZEE5_MOVIE_0-0-gadarekpremkatha",
+    "wynk_id": "srch_zeemusic_ZMC00250",
+    "xstream_category": "Movie",
+    "wynk_name": "Gadar: Ek Prem Katha"
+  },
+  "srch_sonymusic_886447288764": {
+    "xstream_name": "Mitro",
+    "xstream_id": "ZEE5_MOVIE_0-0-27623",
+    "wynk_id": "srch_sonymusic_886447288764",
+    "xstream_category": "Movie",
+    "wynk_name": "Mitro"
+  },
+  "srch_erosintl_QVVESU9fQ2hlZW5pIEt1bV8yMDA3X0Vyb3MgTXVzaWNfaGk": {
+    "xstream_name": "Cheeni Kum",
+    "xstream_id": "ZEE5_MOVIE_0-0-6963",
+    "wynk_id": "srch_erosintl_QVVESU9fQ2hlZW5pIEt1bV8yMDA3X0Vyb3MgTXVzaWNfaGk",
+    "xstream_category": "Movie",
+    "wynk_name": "Cheeni Kum"
+  },
+  "srch_venus_VACDE2166": {
+    "xstream_name": "Robot",
+    "xstream_id": "ZEE5_MOVIE_0-0-movie_466418637",
+    "wynk_id": "srch_venus_VACDE2166",
+    "xstream_category": "Movie",
+    "wynk_name": "Robot"
+  },
+  "srch_hungama_271691": {
+    "xstream_name": "Mr.India",
+    "xstream_id": "ZEE5_MOVIE_0-0-2349",
+    "wynk_id": "srch_hungama_271691",
+    "xstream_category": "Movie",
+    "wynk_name": "Mr.India"
+  },
+  "srch_hungama_18205415": {
+    "xstream_name": "Do Lafzon ki Kahaani",
+    "xstream_id": "ZEE5_MOVIE_0-0-dolafzonkikahani",
+    "wynk_id": "srch_hungama_18205415",
+    "xstream_category": "Movie",
+    "wynk_name": "Do Lafzon ki Kahaani"
+  },
+  "srch_zeemusic_ZMC01020": {
+    "xstream_name": "Jazbaa",
+    "xstream_id": "ZEE5_MOVIE_0-0-movie_357908859",
+    "wynk_id": "srch_zeemusic_ZMC01020",
+    "xstream_category": "Movie",
+    "wynk_name": "Jazbaa"
+  },
+  "srch_saregama_8907210020489": {
+    "xstream_name": "Ram Lakhan",
+    "xstream_id": "ZEE5_MOVIE_0-0-16606",
+    "wynk_id": "srch_saregama_8907210020489",
+    "xstream_category": "Movie",
+    "wynk_name": "Ram Lakhan"
+  },
+  "srch_saregama_8907210011951": {
+    "xstream_name": "Jo Jeeta Wohi Sikandar",
+    "xstream_id": "ZEE5_MOVIE_0-0-6983",
+    "wynk_id": "srch_saregama_8907210011951",
+    "xstream_category": "Movie",
+    "wynk_name": "Jo Jeeta Wohi Sikandar"
+  },
+  "srch_erosintl_QVVESU9fTmFtYXN0ZXkgTG9uZG9uXzIwMDdfRXJvcyBNdXNpY19oaQ": {
+    "xstream_name": "Namastey London",
+    "xstream_id": "ULTRA_MOVIE_Namastey_London_110033",
+    "wynk_id": "srch_erosintl_QVVESU9fTmFtYXN0ZXkgTG9uZG9uXzIwMDdfRXJvcyBNdXNpY19oaQ",
+    "xstream_category": "Movie",
+    "wynk_name": "Namastey London"
+  },
+  "srch_tipsmusic_7225": {
+    "xstream_name": "Raja Babu",
+    "xstream_id": "ULTRA_MOVIE_RAJA_BABU",
+    "wynk_id": "srch_tipsmusic_7225",
+    "xstream_category": "Movie",
+    "wynk_name": "Raja Babu"
+  },
+  "album doesnt exist": {
+    "xstream_name": "Ab tak chhappan 2",
+    "xstream_id": "SHEMAROOME_MOVIE_5d0cec01ed8f7d50b9000a97",
+    "wynk_id": "album doesnt exist",
+    "xstream_category": "Movie",
+    "wynk_name": "Ab tak chhappan 2"
+  },
+  "srch_hungama_341359": {
+    "xstream_name": "8X10 Tasveer",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba8d406c1df413dae0002b7",
+    "wynk_id": "srch_hungama_341359",
+    "xstream_category": "Movie",
+    "wynk_name": "8X10 Tasveer"
+  },
+  "srch_zeemusic_ZMC00831": {
+    "xstream_name": "vodka diaries",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba8d48ac1df413dae0002c9",
+    "wynk_id": "srch_zeemusic_ZMC00831",
+    "xstream_category": "Movie",
+    "wynk_name": "vodka diaries"
+  },
+  "srch_saregama_8907210049060": {
+    "xstream_name": "Mera Naam Joker",
+    "xstream_id": "SHEMAROOME_MOVIE_5b9fb665c1df414534000111",
+    "wynk_id": "srch_saregama_8907210049060",
+    "xstream_category": "Movie",
+    "wynk_name": "Mera Naam Joker"
+  },
+  "srch_hungama_271592": {
+    "xstream_name": "Jab we met",
+    "xstream_id": "SHEMAROOME_MOVIE_5bd9b60ec1df417f0d000000",
+    "wynk_id": "srch_hungama_271592",
+    "xstream_category": "Movie",
+    "wynk_name": "Jab we met"
+  },
+  "srch_tipsmusic_7549": {
+    "xstream_name": "Ajab Prem ki Ghazab Kahani",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba8d265c1df413dae00027d",
+    "wynk_id": "srch_tipsmusic_7549",
+    "xstream_category": "Movie",
+    "wynk_name": "Ajab Prem ki Ghazab Kahani"
+  },
+  "srch_saregama_8907210007879": {
+    "xstream_name": "Don",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba8d265c1df413dae00027d",
+    "wynk_id": "srch_saregama_8907210007879",
+    "xstream_category": "Movie",
+    "wynk_name": "Don"
+  },
+  "srch_hungama_271945": {
+    "xstream_name": "Khakee",
+    "xstream_id": "SHEMAROOME_MOVIE_5d0cec17ed8f7d50b9000a9f",
+    "wynk_id": "srch_hungama_271945",
+    "xstream_category": "Movie",
+    "wynk_name": "Khakee"
+  },
+  "srch_zeemusic_ZMC01004": {
+    "xstream_name": "Hunterr",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba8d2aac1df413dae000283",
+    "wynk_id": "srch_zeemusic_ZMC01004",
+    "xstream_category": "Movie",
+    "wynk_name": "Hunterr"
+  },
+  "srch_shemaroo_777213400955": {
+    "xstream_name": "Dedh Ishqiya",
+    "xstream_id": "SHEMAROOME_MOVIE_5bd9b73bc1df417f0d00000c",
+    "wynk_id": "srch_shemaroo_777213400955",
+    "xstream_category": "Movie",
+    "wynk_name": "Dedh Ishqiya"
+  },
+  "srch_hungama_272251": {
+    "xstream_name": "Golmaal Returns",
+    "xstream_id": "SHEMAROOME_MOVIE_5bd9b638c1df417f0d000002",
+    "wynk_id": "srch_hungama_272251",
+    "xstream_category": "Movie",
+    "wynk_name": "Golmaal Returns"
+  },
+  "srch_hungama_1678380": {
+    "xstream_name": "Dhamaal",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba8d24ac1df413dae000277",
+    "wynk_id": "srch_hungama_1678380",
+    "xstream_category": "Movie",
+    "wynk_name": "Dhamaal"
+  },
+  "srch_tipsmusic_7254": {
+    "xstream_name": "The Legend of bhagat Singh",
+    "xstream_id": "SHEMAROOME_MOVIE_5d0cec4eed8f7d50b9000ab3",
+    "wynk_id": "srch_tipsmusic_7254",
+    "xstream_category": "Movie",
+    "wynk_name": "The Legend of bhagat Singh"
+  },
+  "srch_sonymusic_886443100893": {
+    "xstream_name": "Arakshan",
+    "xstream_id": "SHEMAROOME_MOVIE_5bbae7f2c1df412352000006",
+    "wynk_id": "srch_sonymusic_886443100893",
+    "xstream_category": "Movie",
+    "wynk_name": "Arakshan"
+  },
+  "srch_hungama_354490": {
+    "xstream_name": "Ishqiya",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba8d3cec1df413dae0002b1",
+    "wynk_id": "srch_hungama_354490",
+    "xstream_category": "Movie",
+    "wynk_name": "Ishqiya"
+  },
+  "srch_tipsmusic_6111": {
+    "xstream_name": "Soldier",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba908dcc1df413dae00041b",
+    "wynk_id": "srch_tipsmusic_6111",
+    "xstream_category": "Movie",
+    "wynk_name": "Soldier"
+  },
+  "srch_saregama_8907210049589": {
+    "xstream_name": "Satyam Shivam Sundaram",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba903e3c1df413dae0003a9",
+    "wynk_id": "srch_saregama_8907210049589",
+    "xstream_category": "Movie",
+    "wynk_name": "Satyam Shivam Sundaram"
+  },
+  "srch_saregama_8907210119558": {
+    "xstream_name": "Mughal-e-azam",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba90badc1df413dae000433",
+    "wynk_id": "srch_saregama_8907210119558",
+    "xstream_category": "Movie",
+    "wynk_name": "Mughal-e-azam"
+  },
+  "srch_hungama_1705144": {
+    "xstream_name": "Golmaal: Fun Unlimited",
+    "xstream_id": "SHEMAROOME_MOVIE_5bbae942c1df412352000008",
+    "wynk_id": "srch_hungama_1705144",
+    "xstream_category": "Movie",
+    "wynk_name": "Golmaal: Fun Unlimited"
+  },
+  "srch_universalmusic_00044006422725": {
+    "xstream_name": "Amar Akbar anthony",
+    "xstream_id": "SHEMAROOME_MOVIE_5b9fb803c1df41453400012b",
+    "wynk_id": "srch_universalmusic_00044006422725",
+    "xstream_category": "Movie",
+    "wynk_name": "Amar Akbar anthony"
+  },
+  "srch_hungama_271572": {
+    "xstream_name": "Bhagam Bhag",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba8d342c1df413dae00029b",
+    "wynk_id": "srch_hungama_271572",
+    "xstream_category": "Movie",
+    "wynk_name": "Bhagam Bhag"
+  },
+  "srch_saregama_8907210017243": {
+    "xstream_name": "Namak Halaal",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba8d0ebc1df413dae00026d",
+    "wynk_id": "srch_saregama_8907210017243",
+    "xstream_category": "Movie",
+    "wynk_name": "Namak Halaal"
+  },
+  "srch_venus_VCF1832": {
+    "xstream_name": "Ghayal",
+    "xstream_id": "SHEMAROOME_MOVIE_5ba8d62fc1df413dae0002d5",
+    "wynk_id": "srch_venus_VCF1832",
+    "xstream_category": "Movie",
+    "wynk_name": "Ghayal"
+  },
+  "srch_saregama_8907210186918": {
+    "xstream_name": "Kahaani 2",
+    "xstream_id": "HUNGAMA_MOVIE_44129919",
+    "wynk_id": "srch_saregama_8907210186918",
+    "xstream_category": "Movie",
+    "wynk_name": "Kahaani 2"
+  },
+  "srch_saregama_8907210228601": {
+    "xstream_name": "Haseena Parkar",
+    "xstream_id": "HUNGAMA_MOVIE_44129902",
+    "wynk_id": "srch_saregama_8907210228601",
+    "xstream_category": "Movie",
+    "wynk_name": "Haseena Parkar"
+  },
+  "srch_hungama_23909269": {
+    "xstream_name": "Machine",
+    "xstream_id": "HUNGAMA_MOVIE_44129979",
+    "wynk_id": "srch_hungama_23909269",
+    "xstream_category": "Movie",
+    "wynk_name": "Machine"
+  },
+  "srch_hungama_271587": {
+    "xstream_name": "Bhool Bhulaiya",
+    "xstream_id": "HUNGAMA_MOVIE_1312581",
+    "wynk_id": "srch_hungama_271587",
+    "xstream_category": "Movie",
+    "wynk_name": "Bhool Bhulaiya"
+  },
+  "srch_hungama_271803": {
+    "xstream_name": "Aashiqui",
+    "xstream_id": "HUNGAMA_MOVIE_1336074",
+    "wynk_id": "srch_hungama_271803",
+    "xstream_category": "Movie",
+    "wynk_name": "Aashiqui"
+  },
+  "srch_sonymusic_886443925045": {
+    "xstream_name": "Shootout at Wadala",
+    "xstream_id": "HUNGAMA_MOVIE_15062549",
+    "wynk_id": "srch_sonymusic_886443925045",
+    "xstream_category": "Movie",
+    "wynk_name": "Shootout at Wadala"
+  },
+  "srch_zeemusic_ZMC01028": {
+    "xstream_name": "Kyaa Kool Hain Hum 3",
+    "xstream_id": "HUNGAMA_MOVIE_48727818",
+    "wynk_id": "srch_zeemusic_ZMC01028",
+    "xstream_category": "Movie",
+    "wynk_name": "Kyaa Kool Hain Hum 3"
+  },
+  "srch_hungama_1819872": {
+    "xstream_name": "Lootera",
+    "xstream_id": "HUNGAMA_MOVIE_15061818",
+    "wynk_id": "srch_hungama_1819872",
+    "xstream_category": "Movie",
+    "wynk_name": "Lootera"
+  },
+  "srch_hungama_2405464": {
+    "xstream_name": "Ragini MMS 2",
+    "xstream_id": "HUNGAMA_MOVIE_15061827",
+    "wynk_id": "srch_hungama_2405464",
+    "xstream_category": "Movie",
+    "wynk_name": "Ragini MMS 2"
+  },
+  "srch_hungama_375334": {
+    "xstream_name": "Once upon a time in Mumbai",
+    "xstream_id": "HUNGAMA_MOVIE_15062543",
+    "wynk_id": "srch_hungama_375334",
+    "xstream_category": "Movie",
+    "wynk_name": "Once upon a time in Mumbai"
+  },
+  "srch_saregama_8907210020144": {
+    "xstream_name": "Ragini MMS",
+    "xstream_id": "HUNGAMA_MOVIE_15062534",
+    "wynk_id": "srch_saregama_8907210020144",
+    "xstream_category": "Movie",
+    "wynk_name": "Ragini MMS"
+  },
+  "srch_hungama_271820": {
+    "xstream_name": "Dil hai ki manta Nahi",
+    "xstream_id": "HUNGAMA_MOVIE_1336077",
+    "wynk_id": "srch_hungama_271820",
+    "xstream_category": "Movie",
+    "wynk_name": "Dil hai ki manta Nahi"
+  },
+  "srch_hungama_271582": {
+    "xstream_name": "Shootout at Lokhandwala",
+    "xstream_id": "HUNGAMA_MOVIE_15062546",
+    "wynk_id": "srch_hungama_271582",
+    "xstream_category": "Movie",
+    "wynk_name": "Shootout at Lokhandwala"
+  },
+  "srch_hungama_1833858": {
+    "xstream_name": "Once upon a time in Mumbai Dobara",
+    "xstream_id": "HUNGAMA_MOVIE_15062552",
+    "wynk_id": "srch_hungama_1833858",
+    "xstream_category": "Movie",
+    "wynk_name": "Once upon a time in Mumbai Dobara"
+  },
+  "srch_sonymusic_886443875814": {
+    "xstream_name": "Ek thi Daayan",
+    "xstream_id": "HUNGAMA_MOVIE_15061821",
+    "wynk_id": "srch_sonymusic_886443875814",
+    "xstream_category": "Movie",
+    "wynk_name": "Ek thi Daayan"
+  },
+  "srch_sonymusic_884977546286": {
+    "xstream_name": "Love Sex Dhoka",
+    "xstream_id": "HUNGAMA_MOVIE_15062540",
+    "wynk_id": "srch_sonymusic_884977546286",
+    "xstream_category": "Movie",
+    "wynk_name": "Love Sex Dhoka"
+  },
+  "srch_sonymusic_884977990614": {
+    "xstream_name": "Shor in the City",
+    "xstream_id": "HUNGAMA_MOVIE_15062577",
+    "wynk_id": "srch_sonymusic_884977990614",
+    "xstream_category": "Movie",
+    "wynk_name": "Shor in the City"
+  },
+  "srch_erosintl_eros000061": {
+    "xstream_name": "Badlapur",
+    "xstream_id": "EROSNOW_MOVIE_6272897",
+    "wynk_id": "srch_erosintl_eros000061",
+    "xstream_category": "Movie",
+    "wynk_name": "Badlapur"
+  },
+  "srch_erosintl_eros000267": {
+    "xstream_name": "Happy Phirr Bhaag Jayegi",
+    "xstream_id": "EROSNOW_MOVIE_6903665",
+    "wynk_id": "srch_erosintl_eros000267",
+    "xstream_category": "Movie",
+    "wynk_name": "Happy Phirr Bhaag Jayegi"
+  },
+  "srch_erosintl_QVVESU9fVmlja3kgRG9ub3JfbnVsbF9Fcm9zIE11c2ljX2hp": {
+    "xstream_name": "Vicky Donor",
+    "xstream_id": "EROSNOW_MOVIE_6093531",
+    "wynk_id": "srch_erosintl_QVVESU9fVmlja3kgRG9ub3JfbnVsbF9Fcm9zIE11c2ljX2hp",
+    "xstream_category": "Movie",
+    "wynk_name": "Vicky Donor"
+  },
+  "srch_erosintl_eros000244": {
+    "xstream_name": "Shubh Mangal Saavdhan",
+    "xstream_id": "EROSNOW_MOVIE_6845260",
+    "wynk_id": "srch_erosintl_eros000244",
+    "xstream_category": "Movie",
+    "wynk_name": "Shubh Mangal Saavdhan"
+  },
+  "srch_erosintl_eros000207": {
+    "xstream_name": "Sanam teri Kasam",
+    "xstream_id": "EROSNOW_MOVIE_6687211",
+    "wynk_id": "srch_erosintl_eros000207",
+    "xstream_category": "Movie",
+    "wynk_name": "Sanam teri Kasam"
+  },
+  "srch_erosintl_eros000193": {
+    "xstream_name": "Bajirao Mastani",
+    "xstream_id": "EROSNOW_MOVIE_6675433",
+    "wynk_id": "srch_erosintl_eros000193",
+    "xstream_category": "Movie",
+    "wynk_name": "Bajirao Mastani"
+  },
+  "srch_erosintl_eros000258": {
+    "xstream_name": "English Vinglish",
+    "xstream_id": "EROSNOW_MOVIE_6687212",
+    "wynk_id": "srch_erosintl_eros000258",
+    "xstream_category": "Movie",
+    "wynk_name": "English Vinglish"
+  },
+  "srch_erosintl_eros000270": {
+    "xstream_name": "Goliyon Ki Rasleela Ram Leela",
+    "xstream_id": "EROSNOW_MOVIE_6124237",
+    "wynk_id": "srch_erosintl_eros000270",
+    "xstream_category": "Movie",
+    "wynk_name": "Goliyon Ki Rasleela Ram Leela"
+  },
+  "srch_hungama_406528": {
+    "xstream_name": "Agent Vinod",
+    "xstream_id": "EROSNOW_MOVIE_6091393",
+    "wynk_id": "srch_hungama_406528",
+    "xstream_category": "Movie",
+    "wynk_name": "Agent Vinod"
+  },
+  "srch_erosintl_eros000249": {
+    "xstream_name": "Mukkabaaz",
+    "xstream_id": "EROSNOW_MOVIE_6862451",
+    "wynk_id": "srch_erosintl_eros000249",
+    "xstream_category": "Movie",
+    "wynk_name": "Mukkabaaz"
+  },
+  "srch_hungama_396869": {
+    "xstream_name": "Rockstar",
+    "xstream_id": "EROSNOW_MOVIE_1000637",
+    "wynk_id": "srch_hungama_396869",
+    "xstream_category": "Movie",
+    "wynk_name": "Rockstar"
+  },
+  "srch_erosintl_eros000243": {
+    "xstream_name": "Munna Michael",
+    "xstream_id": "EROSNOW_MOVIE_6830600",
+    "wynk_id": "srch_erosintl_eros000243",
+    "xstream_category": "Movie",
+    "wynk_name": "Munna Michael"
+  },
+  "srch_hungama_1592731": {
+    "xstream_name": "Dabangg 2",
+    "xstream_id": "EROSNOW_MOVIE_6110210",
+    "wynk_id": "srch_hungama_1592731",
+    "xstream_category": "Movie",
+    "wynk_name": "Dabangg 2"
+  },
+  "srch_hungama_2110236": {
+    "xstream_name": "krrish 3",
+    "xstream_id": "EROSNOW_MOVIE_6123555",
+    "wynk_id": "srch_hungama_2110236",
+    "xstream_category": "Movie",
+    "wynk_name": "krrish 3"
+  },
+  "srch_erosintl_eros000064": {
+    "xstream_name": "Tanu Weds Manu Returns",
+    "xstream_id": "EROSNOW_MOVIE_6353996",
+    "wynk_id": "srch_erosintl_eros000064",
+    "xstream_category": "Movie",
+    "wynk_name": "Tanu Weds Manu Returns"
+  },
+  "srch_hungama_395559": {
+    "xstream_name": "Ra.one",
+    "xstream_id": "EROSNOW_MOVIE_6168496",
+    "wynk_id": "srch_hungama_395559",
+    "xstream_category": "Movie",
+    "wynk_name": "Ra.one"
+  },
+  "srch_hungama_1580059": {
+    "xstream_name": "Khiladi 786",
+    "xstream_id": "EROSNOW_MOVIE_6104507",
+    "wynk_id": "srch_hungama_1580059",
+    "xstream_category": "Movie",
+    "wynk_name": "Khiladi 786"
+  },
+  "srch_universalmusic_00044001780721": {
+    "xstream_name": "Devdas",
+    "xstream_id": "EROSNOW_MOVIE_6126100",
+    "wynk_id": "srch_universalmusic_00044001780721",
+    "xstream_category": "Movie",
+    "wynk_name": "Devdas"
+  },
+  "srch_erosintl_eros000271": {
+    "xstream_name": "R...Rajkumar",
+    "xstream_id": "EROSNOW_MOVIE_6124434",
+    "wynk_id": "srch_erosintl_eros000271",
+    "xstream_category": "Movie",
+    "wynk_name": "R...Rajkumar"
+  },
+  "srch_hungama_398968": {
+    "xstream_name": "Desi Boyz",
+    "xstream_id": "EROSNOW_MOVIE_1000633",
+    "wynk_id": "srch_hungama_398968",
+    "xstream_category": "Movie",
+    "wynk_name": "Desi Boyz"
+  },
+  "srch_sonymusic_886444018869": {
+    "xstream_name": "Raanjhana",
+    "xstream_id": "EROSNOW_MOVIE_6687217",
+    "wynk_id": "srch_sonymusic_886444018869",
+    "xstream_category": "Movie",
+    "wynk_name": "Raanjhana"
+  },
+  "srch_hungama_2575176": {
+    "xstream_name": "Singham Returns",
+    "xstream_id": "EROSNOW_MOVIE_6170620",
+    "wynk_id": "srch_hungama_2575176",
+    "xstream_category": "Movie",
+    "wynk_name": "Singham Returns"
+  },
+  "srch_pplmumbai_REPL333": {
+    "xstream_name": "Hum Saath Sath Hain",
+    "xstream_id": "EROSNOW_MOVIE_6171935",
+    "wynk_id": "srch_pplmumbai_REPL333",
+    "xstream_category": "Movie",
+    "wynk_name": "Hum Saath Sath Hain"
+  },
+  "srch_erosintl_eros000229": {
+    "xstream_name": "Happy Bhaag Jayegi",
+    "xstream_id": "EROSNOW_MOVIE_6761832",
+    "wynk_id": "srch_erosintl_eros000229",
+    "xstream_category": "Movie",
+    "wynk_name": "Happy Bhaag Jayegi"
+  },
+  "srch_hungama_18143215": {
+    "xstream_name": "Housefull 3",
+    "xstream_id": "EROSNOW_MOVIE_6733381",
+    "wynk_id": "srch_hungama_18143215",
+    "xstream_category": "Movie",
+    "wynk_name": "Housefull 3"
+  },
+  "srch_sonymusic_886443979321": {
+    "xstream_name": "Go Goa Gone",
+    "xstream_id": "EROSNOW_MOVIE_6114744",
+    "wynk_id": "srch_sonymusic_886443979321",
+    "xstream_category": "Movie",
+    "wynk_name": "Go Goa Gone"
+  },
+  "srch_hungama_16491525": {
+    "xstream_name": "Prem Ratan Dhan Payo",
+    "xstream_id": "EROSNOW_MOVIE_6679451",
+    "wynk_id": "srch_hungama_16491525",
+    "xstream_category": "Movie",
+    "wynk_name": "Prem Ratan Dhan Payo"
+  },
+  "srch_hungama_362275": {
+    "xstream_name": "Housefull",
+    "xstream_id": "EROSNOW_MOVIE_1000249",
+    "wynk_id": "srch_hungama_362275",
+    "xstream_category": "Movie",
+    "wynk_name": "Housefull"
+  },
+  "srch_hungama_377658": {
+    "xstream_name": "Anjaana Anjaani",
+    "xstream_id": "EROSNOW_MOVIE_1000053",
+    "wynk_id": "srch_hungama_377658",
+    "xstream_category": "Movie",
+    "wynk_name": "Anjaana Anjaani"
+  }
+}

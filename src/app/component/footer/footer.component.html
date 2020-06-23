@@ -1,0 +1,183 @@
+<footer class="w-100 float-left mt-5" [ngClass]="{'sideSpacer':!this._router.url.includes('/music/') || this._router.url.includes('/airtel-hellotunes') }" id="footer">
+    <div *ngIf="!isPwaPushShow; else PwaPush" class="bg-light d-flex align-items-center justify-content-between justify-content-md-between rounded-sm position-relative p-4 fAdvertisement">
+        <div class="f-lhs d-flex align-items-center">
+            <div class="f-lhs-icon mr-3">
+                <img appImgLazyLoad src="assets/images/footerIcon.svg" alt="" title="" width="64" height="64">
+            </div>
+            <div class="fLeftAdd d-inline-block">
+                <h3 class="mb-1">Best way to Listen to Music!</h3>
+                <p class="dark-text-color m-0">Don’t forget to install Wynk Music on your mobile phones</p>
+                <button class="f-lhs-button mt-3 d-md-none d-inline-block red dark-red" (click)="openStoreUsingAppsflyer('footer_bottom')">Get App</button>
+            </div>
+        </div>
+        <div class="f-rhs d-none d-sm-none d-md-inline-block">
+            <div class="appStore">
+                <img appImgLazyLoad alt="Google App" title="Google App" width="150" height="45" src="https://img.wynk.in/unsafe/150x45/filters:no_upscale():format(png):quality(100)/https://s3.ap-south-1.amazonaws.com/assets.wynk.in/images/wap-assets/footer-v2-but-play.png"
+                    (click)="navigateToApp(true)" />
+                <img class="ml-3" appImgLazyLoad alt="IOS App" title="IOS App" width="150" height="45"  src="{{'app-store' | iconTheme: theme }}"
+                    (click)="navigateToApp(false)" />
+            </div>
+        </div>
+    </div>
+    <ng-template #PwaPush> 
+        <div class="bg-light d-flex align-items-center justify-content-between justify-content-md-between rounded-sm position-relative p-4 fAdvertisement">
+            <div class="f-lhs-icon mr-3">
+                <img appImgLazyLoad src="../../../{{'tv-left' | iconTheme: theme }}" alt="" title="" width="158" height="101">                    
+            </div> 
+            <div class="text-center d-inline-block">
+                <h3 class="mb-1">Best way to listen to music!</h3>
+                <p class="dark-text-color m-0">Install the Wynk Music desktop app now!</p>
+            </div>
+            <div class="f-rhs d-none d-sm-none d-md-inline-block">
+                <button aria-label="install PWA" class="f-rhs dark-red pl-3 pr-3 d-none d-sm-none d-md-inline-block" (click)="openPwaPopUp('Install_Desktop_Widget')">Install on Desktop</button>
+            </div>
+        </div>
+    </ng-template>
+    <!--  -->
+    <div class="row mt-5 position-relative" *ngIf="genres && oldsongs && (albums || (language && albumsByLang[language])) && topLanguageList">
+
+         <!-- dynamic albums -->
+         <div class="col-md-3 mb-4" (click)="toggleFooter('album')">
+                <div class="fHeading">Latest {{(language && albumsByLang[language]) ? language : '' }} Albums <i class="icon-ic_global_down_chevron_dark"></i></div>
+                <div class="fNames mt-2" *ngIf="album && language && albumsByLang[language]">  
+                    <span *ngFor="let album of albumsByLang[language];let last=last">
+                    <a routerLink="/music/{{ album.type | lowercase}}/{{album.title |lowercase |replaceWhiteSpace}}/{{album.id}}">{{album.title}}<span
+                            *ngIf="!last">&nbsp;&nbsp;|&nbsp;&nbsp;</span></a>
+                        </span>
+                </div> 
+                <div class="fNames mt-2" *ngIf="album && (!language || (language && !albumsByLang[language]))">  
+                    <span *ngFor="let album of albums;let last=last">
+                    <a routerLink="/music/{{ album.type==='package'?'list':album.type | lowercase}}/{{album.title |lowercase |replaceWhiteSpace}}/{{album.id}}">{{album.title}}<span
+                            *ngIf="!last">&nbsp;&nbsp;|&nbsp;&nbsp;</span></a>
+                        </span>
+                </div>          
+            </div>
+
+        <div class="col-md-3 mb-4" (click)="toggleFooter('genre')">
+            <div class="fHeading">Genres <i class="icon-ic_global_down_chevron_dark"></i></div>
+            <div class="fNames mt-2" *ngIf="genre">
+                <span *ngFor="let genre of genres;let last=last">
+                <a routerLink="/music/{{genre.type==='package'?'list':genre.type | lowercase}}/{{genre.title |lowercase |replaceWhiteSpace}}/{{genre.id}}">{{genre.title}}<span
+                        *ngIf="!last">&nbsp;&nbsp;|&nbsp;&nbsp;</span></a>
+                </span>
+            </div>
+        </div>
+
+
+        <div class="col-md-3 mb-4" (click)="toggleFooter('oldSong')">
+                <div class="fHeading">OLD SONGS <i class="icon-ic_global_down_chevron_dark"></i></div>
+                <div class="fNames mt-2" *ngIf="oldSong">
+                    <span *ngFor="let oldSong of oldsongs;let last=last">
+                    <a routerLink="/music/{{oldSong.type==='package'?'list':oldSong.type | lowercase}}/{{oldSong.title |lowercase |replaceWhiteSpace}}/{{oldSong.id}}"> Old {{oldSong.title!=="oldSongs"? oldSong.title : ""}} Songs <span
+                            *ngIf="!last">&nbsp;&nbsp;|&nbsp;&nbsp;</span></a>
+                        </span>
+                </div>
+            </div>
+
+            <div class="col-md-3 mb-4" (click)="toggleFooter('topArtist')">
+                    <div class="fHeading">Top Artists <i class="icon-ic_global_down_chevron_dark"></i></div>
+                    <div class="fNames mt-2" *ngIf="topArtist">
+                        <span *ngFor="let artist of topArtistList;let last=last">
+                        <a routerLink="/music/{{artist.type | lowercase}}/{{artist.title |lowercase |replaceWhiteSpace}}/{{artist.id | replaceCpIds :artist.title}}">{{artist.title}}<span
+                                *ngIf="!last">&nbsp;&nbsp;|&nbsp;&nbsp;</span></a>
+                            </span>
+                    </div>
+                </div>
+    </div>  
+
+    <!--  -->
+    <div class="row  position-relative" *ngIf="(latestSongs || (language && latestSongsByLang && latestSongsByLang[language])) && (topSearchedLyrics || (language && lyricsByLang[language])) && topArtistList && latestTopSongs">
+            <div class="col-md-3 mb-4" (click)="toggleFooter('topLang')">
+                    <div class="fHeading">Languages<i class="icon-ic_global_down_chevron_dark"></i></div>
+                    <div class="fNames mt-2" *ngIf="topLang">
+                        <span *ngFor="let lang of topLanguageList;let last=last">
+                        <a routerLink="/music/{{ 'songs' | lowercase}}/{{lang.title.split(' ')[1]|lowercase |replaceWhiteSpace}}">{{lang.title}} Songs<span
+                                *ngIf="!last">&nbsp;&nbsp;|&nbsp;&nbsp;</span></a>
+                            </span>
+                    </div>
+                </div>   
+
+        <!-- dynamic latest songs -->
+        <div class="col-md-3 mb-4" (click)="toggleFooter('latestSong')">
+                <div class="fHeading">Latest {{(language && latestSongsByLang[language]) ? language : '' }} Songs <i class="icon-ic_global_down_chevron_dark"></i></div>
+                <div class="fNames mt-2" *ngIf="latestSong && language && latestSongsByLang[language]">
+                    <span *ngFor="let song of latestSongsByLang[language];let last=last">
+                    <a routerLink="/music/{{ song.type | lowercase}}/{{song.title |lowercase |replaceWhiteSpace}}/{{song.id | replaceCpIds :song.title}}">{{song.title}}<span
+                            *ngIf="!last">&nbsp;&nbsp;|&nbsp;&nbsp;</span></a>
+                        </span>
+                </div>  
+                <div class="fNames mt-2" *ngIf="latestSong && (!language || (language && !latestSongsByLang[language]))">
+                        <span *ngFor="let song of latestSongs;let last=last">
+                        <a routerLink="/music/{{ song.type | lowercase}}/{{song.title |lowercase |replaceWhiteSpace}}/{{song.id | replaceCpIds :song.title}}">{{song.title}}<span
+                                *ngIf="!last">&nbsp;&nbsp;|&nbsp;&nbsp;</span></a>
+                            </span>
+                    </div>       
+        </div>
+        
+        <div class="col-md-3 mb-4" (click)="toggleFooter('topSongs')">
+                <div class="fHeading">Top Songs <i class="icon-ic_global_down_chevron_dark"></i></div>
+                <div class="fNames mt-2" *ngIf="topSongs">
+                    <span *ngFor="let song of latestTopSongs;let last=last">
+                    <a routerLink="/music/{{ song.type | lowercase}}/{{song.title |lowercase |replaceWhiteSpace}}/{{song.id | replaceCpIds :song.title}}">{{song.title}}<span
+                            *ngIf="!last">&nbsp;&nbsp;|&nbsp;&nbsp;</span></a>
+                        </span>
+                </div>       
+            </div>
+
+        <!-- dynamic lyrics -->
+
+        <div class="col-md-3 mb-4" (click)="toggleFooter('topLyrics')">
+            <div class="fHeading">Top Searched {{(language && lyricsByLang[language]) ? language : '' }} Lyrics <i class="icon-ic_global_down_chevron_dark"></i></div>
+            <div class="fNames mt-2" *ngIf="topLyrics && (!language || (language && !lyricsByLang[language]))">
+                <span *ngFor="let song of topSearchedLyrics;let last=last">
+                <a routerLink="/music/{{ song.type | lowercase}}/{{song.title |lowercase |replaceWhiteSpace}}/lyrics/{{song.id | replaceCpIds :song.title}}">{{song.title}}<span
+                        *ngIf="!last">&nbsp;&nbsp;|&nbsp;&nbsp;</span></a>
+                    </span>
+            </div>   
+            <div class="fNames mt-2" *ngIf="topLyrics && language && lyricsByLang[language]">
+                    <span *ngFor="let song of lyricsByLang[language];let last=last">
+                    <a routerLink="/music/{{ song.type | lowercase}}/{{song.title |lowercase |replaceWhiteSpace}}/lyrics/{{song.id | replaceCpIds :song.title}}">{{song.title}}<span
+                            *ngIf="!last">&nbsp;&nbsp;|&nbsp;&nbsp;</span></a>
+                        </span>
+            </div>    
+        </div>
+    </div>
+
+    <div class="row footerMidSection d-flex align-items-center justify-content-between border-top border-bottom">
+        <div class="col-md-10 text-center mt-3 mb-3 text-md-left text-sm-center">
+            <a class="fLinks" routerLink="/corporate/index.html" (click)="sendPageEvents('About_Us','FOOTER','click')" target="_blank">About Us</a>|
+            <a class="fLinks" routerLink="/corporate/advertise.html" (click)="sendPageEvents('Advertise_With_Us','FOOTER','click')" target="_blank">Advertise with Us</a>|
+            <a class="fLinks" routerLink="/music/privacy_policy" (click)="sendPageEvents('Privacy_Policy','FOOTER','click')">Privacy Policy</a>|
+            <a class="fLinks" routerLink="/music/tnc" (click)="sendPageEvents('Terms_of_Use','FOOTER','click')">Terms of
+                Use</a>|
+            <a class="fLinks" href="https://wynk.belong.co/" (click)="sendPageEvents('Work_With_Us','FOOTER','click')" target="_blank" rel="noopener noreferrer">Work with us</a>|
+            <a class="fLinks" routerLink="/corporate/contact.html" (click)="sendPageEvents('Contact_Us','FOOTER','click')" target="_blank" rel="noopener noindex">Contact Us</a>|
+            <a class="fLinks" href="https://wynkproduct.typeform.com/to/OmMoPG" (click)="sendPageEvents('Feedback','FOOTER','click')" target="_blank" rel="nofollow noindex noopener">Feedback</a>|
+            <a class="fLinks" href="https://wynk.in/airtel-hellotunes" (click)="sendPageEvents('Hellotunes','FOOTER','click')" target="_blank" rel="noopener">Hellotunes</a>
+
+        </div>
+        <div class="col-md-2 mt-3 mb-3 text-md-right text-center text-sm-center pl-0">
+            <div class="circleIcons w-100 d-flex justify-content-md-end justify-content-center">
+                <a (click)="sendPageEvents('Follow_Facebook','FOOTER','click')" title="Facebook" class="rounded-circle fbColor d-flex justify-content-center align-items-center" href="https://www.facebook.com/WynkMusic" rel="noopener noreferrer" target="_blank">
+                    <i class="icon-ic-global-facebook-dark"></i>
+                </a>
+                <a (click)="sendPageEvents('Follow_Twitter','FOOTER','click')" title="Twitter" class="rounded-circle twColor d-flex justify-content-center align-items-center" href="https://twitter.com/WynkMusic" rel="noopener noreferrer" target="_blank">
+                    <i class="icon-ic_global_twitter_dark"></i>
+                </a>
+                <a (click)="sendPageEvents('Follow_Instagram','FOOTER','click')" title="Instagram" class="rounded-circle instaColor d-flex justify-content-center align-items-center" href="https://www.instagram.com/wynkmusic" rel="noopener noreferrer" target="_blank">
+                    <i class="icon-ic_global_insta_dark"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row footerLastSec">
+        <div class="col-md-7 text-center mt-3 mb-3 text-md-left text-sm-center">
+            <p>Wynk Music is the one-stop music app for the latest to the greatest songs that you love. Play your favourite music online for free or download mp3. Enjoy from over 60 Lakh Hindi, English, Bollywood, Regional, Latest, Old songs and more.</p>
+        </div>
+        <div class="col-md-5 mt-3 mb-3 text-center text-sm-center text-md-right">
+            <p>2020 © All rights reserved | Airtel Digital Limited</p>
+        </div>
+    </div>
+
+</footer>

@@ -44,7 +44,6 @@ What do you need to run this app:
 * Angular version 9.1.11
 * Angular CLI version 9.1.8
 * Typescript version 3.8.3
-* Jquery version 3.5.1
 * Bootstrap version 4.5.0
 * Fontawesome version 5.13.0
 

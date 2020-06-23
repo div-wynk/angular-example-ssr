@@ -1,0 +1,168 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    display: none;
+    width: 0px;
+    background: transparent;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.border-radius-10{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+}
+
+.sideSpacer {
+    width: 83%;
+    margin: 0 auto;
+}
+
+/*--------- Navbar Style-------------*/
+
+.wynklogo {
+    height: 31px;
+    object-fit: contain;
+}
+
+.rectangleShadow {
+    box-shadow: 0 3px 6px 0 rgba(40, 47, 54, 0.1);
+    -webkit-box-shadow: 0 3px 6px 0 rgba(40, 47, 54, 0.1);
+    -moz-box-shadow: 0 3px 6px 0 rgba(40, 47, 54, 0.1);
+    -o-box-shadow: 0 3px 6px 0 rgba(46, 82, 117, 0.1);
+    -ms-box-shadow: 0 3px 6px 0 rgba(40, 47, 54, 0.1);
+    background-color: #ffffff;
+    border-top: 3px solid #ed1c24;
+    height: 67px;
+    margin-bottom: 3rem;
+}
+
+
+/*--------- Navbar Style Finish -------------*/
+
+
+/*--------- Banner ----------*/
+
+.slider {
+    display: flex;
+    margin-bottom: 4rem;
+}
+
+.slide:first-child{
+    margin-left: 0px;
+}
+
+.slide{
+    width: 20%;
+    margin-left: 15px;
+    background-color: #e8e8e8;
+    border-radius: 20px;
+    position: relative;
+    padding-top: 22%;
+}
+
+.mid-slide{
+    width: 60%;
+}
+
+.slideLRadius{
+    border-radius: 0px 20px 20px 0px;
+}
+
+.slideRRadius{
+    border-radius: 20px 0px 0px 20px;
+}
+
+/*------ Rails --------*/
+
+.grayLine{
+    width: 166px;
+}
+
+.myWorkContent{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.rail li {
+    width: 140px;
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.defaultBg {
+    margin: 0;
+    display: block;
+    border: 0;
+    position: relative;
+    background-color: #e8e8e8;
+    padding-top: 100%;
+    background: -webkit-gradient(linear, left top, right top, color-stop(25%, #f2f2f2), color-stop(37%, #e6e6e6), color-stop(63%, #f2f2f2));
+    background: linear-gradient(-90deg, #f2f2f2 25%, #e6e6e6 37%, #f2f2f2 63%);
+    background-size: 400% 100%;
+    -webkit-animation: shimmer-loading 1.8s ease-in-out infinite;
+    animation: shimmer-loading 1.8s ease-in-out infinite;
+        
+}
+@keyframes shimmer-loading {
+    0% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+  }
+@media (max-width: 768px) and (min-width: 319px){
+
+    .sideSpacer{
+        width: 100%;
+    }
+
+    .rail li {
+        width: 120px;
+    }
+
+    .slide{
+    width: 5%;
+    margin-left: 10px;
+    border-radius: 10px;
+    padding-top: 30%;
+}
+
+.slideLRadius{
+    border-radius: 0px 10px 10px 0px;
+}
+
+.slideRRadius{
+    border-radius: 10px 0px 0px 10px;
+}
+
+.myWorkContent{
+    padding-left: 15px;
+}
+
+.mid-slide{
+    width: 95%;
+}
+}

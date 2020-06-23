@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <defs>
+        <style>
+            .cls-1,.cls-3,.cls-4,.cls-5,.cls-6,.cls-7{fill:none}.cls-2{clip-path:url(#clip-path)}.cls-3{opacity:.2}.cls-4{opacity:.3}.cls-5{opacity:.4}.cls-6{opacity:.5}.cls-7{opacity:.8}.cls-8{fill:#282f36}
+        </style>
+        <clipPath id="clip-path">
+            <path d="M0 0h24v24H0z" class="cls-1"/>
+        </clipPath>
+    </defs>
+    <g id="ic_chevron_right_dark" class="cls-2" transform="rotate(90 12 12)">
+        <g id="Icon_BG" class="cls-2" data-name="Icon BG">
+            <path id="_24x24" d="M0 0h24v24H0z" class="cls-3" data-name="24x24"/>
+            <path id="_20x20" d="M0 0h20v20H0z" class="cls-3" data-name="20x20" transform="translate(2 2)"/>
+            <path id="_18x18" d="M0 0h18v18H0z" class="cls-4" data-name="18x18" transform="translate(3 3)"/>
+            <path id="_16x16" d="M0 0h16v16H0z" class="cls-5" data-name="16x16" transform="translate(4 4)"/>
+            <path id="_12x12" d="M0 0h12v12H0z" class="cls-6" data-name="12x12" transform="translate(6 6)"/>
+            <path id="_8x8" d="M0 0h8v8H0z" class="cls-7" data-name="8x8" transform="translate(8 8)"/>
+        </g>
+        <path id="Path_4" d="M7.327 8.685L5.913 10.1l5.787 5.787 2.533-2.528 2.55-2.553.707-.708-1.414-1.413L11.7 13.06z" class="cls-8" transform="rotate(-90 11.618 11.783)"/>
+    </g>
+</svg>

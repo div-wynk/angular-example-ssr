@@ -11,7 +11,7 @@ import { AppUtil } from '../../utils/AppUtil';
 import { LoaderService } from '../../shared/services/loader.service';
 import { Router } from '@angular/router';
 import { LocalStorageWrapperService } from '../../shared/services/localstorage-wrapper.service';
-// import { TfaService } from '../../shared/services/tfa.service';
+ import { TfaService } from '../../shared/services/tfa.service';
 
 @Component({
   selector: 'app-login',
@@ -48,8 +48,8 @@ export class LoginComponent {
     private appUtil: AppUtil,
     private loaderService: LoaderService,
     private router: Router,
-    private _localStorageWrapperService: LocalStorageWrapperService
-    // private tfkService: TfaService
+    private _localStorageWrapperService: LocalStorageWrapperService,
+     private tfkService: TfaService
   ) {    
   }
 
@@ -138,7 +138,7 @@ export class LoginComponent {
           uid: res.uid,
         }
         this.commonService.saveRequiredParams(res.dt, res.kt, res.server_timestamp);
-        // this.tfkService.updateTek();
+        this.tfkService.updateTek();
         this.commonService.setUserDetailsObj(res.config);
         this.commonService.setCookieForLoggedInUser(loggedInCookies);
         this.persistDataService.setCookieForLoggedInUser(loggedInCookies);

@@ -1,7 +1,7 @@
 <div id="appflyer-show">
         <div id="my-banner"></div>
     </div>
-     <!-- <app-top-nav (languageChangedAgain)="languageChanged($event)" [config]="config"></app-top-nav> -->
+     <app-top-nav (languageChangedAgain)="languageChanged($event)" [config]="config"></app-top-nav>
     <div *ngIf="this._router.url.includes('/airtel-hellotunes'); else homeRoute">
             <router-outlet></router-outlet>
             <div class="container-fluid">
@@ -16,8 +16,8 @@
             <div style="min-height: 60vh;">
                 <router-outlet></router-outlet>
             </div>
-            <!-- <app-queue></app-queue>
-            <app-footer></app-footer> -->
+            <!-- <app-queue></app-queue> -->
+            <app-footer></app-footer>
         </div>
     </ng-template>
     
